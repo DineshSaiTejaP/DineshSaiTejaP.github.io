@@ -3,902 +3,975 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dinesh Sai Teja Paruchuri | AI Engineer · GenAI · RAG · Agentic AI</title>
-  <meta name="description" content="Portfolio of Dinesh Sai Teja Paruchuri — AI Engineer specialising in Generative AI, RAG pipelines, Agentic Systems and LLM Evaluation at PwC India." />
-  <meta name="keywords" content="AI Engineer, GenAI, LangGraph, LangChain, RAG, Agentic AI, AWS Bedrock, LLM, PwC India, BITS Pilani" />
-  <meta property="og:title" content="Dinesh Sai Teja Paruchuri | AI Engineer" />
-  <meta property="og:description" content="AI Engineer specialising in Generative AI, RAG & Agentic systems at PwC India." />
+  <title>Dinesh Sai Teja Paruchuri | AI Engineer · Agentic AI · RAG · GenAI</title>
+  <meta name="description" content="Portfolio of Dinesh Sai Teja Paruchuri — AI Engineer specialising in Agentic AI, RAG Evaluation, Generative AI and LLM systems at PwC India." />
+  <meta name="keywords" content="AI Engineer, Agentic AI, LangGraph, RAG Evaluation, Agentic Evaluation, LangChain, AWS Bedrock, LLM, PwC India, BITS Pilani, GenAI" />
+  <meta property="og:title" content="Dinesh Sai Teja Paruchuri | AI Engineer — Agentic AI & RAG" />
+  <meta property="og:description" content="AI Engineer specialising in Agentic AI, RAG & Evaluation at PwC India. Open to Senior AI/GenAI roles." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* ===== RESET & BASE ===== */
+    /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg: #050810;
-      --bg2: #0a0f1e;
-      --bg3: #0f1629;
-      --surface: rgba(255,255,255,0.04);
-      --surface2: rgba(255,255,255,0.07);
-      --border: rgba(255,255,255,0.08);
-      --accent: #6c63ff;
-      --accent2: #00d4ff;
-      --accent3: #ff6b9d;
-      --grad: linear-gradient(135deg, #6c63ff 0%, #00d4ff 100%);
-      --grad2: linear-gradient(135deg, #ff6b9d, #6c63ff);
-      --text: #e8eaf6;
-      --text2: #9ea3c5;
-      --text3: #5c6180;
-      --radius: 16px;
-      --radius2: 24px;
-      --glow: 0 0 40px rgba(108,99,255,0.3);
-      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+      --bg:      #03050f;
+      --bg2:     #070b18;
+      --bg3:     #0c1228;
+      --glass:   rgba(255,255,255,0.035);
+      --glass2:  rgba(255,255,255,0.065);
+      --border:  rgba(255,255,255,0.07);
+      --border2: rgba(108,99,255,0.25);
+      --p:       #7c6dff;
+      --p2:      #9b8dff;
+      --cyan:    #00d4ff;
+      --pink:    #ff6b9d;
+      --gold:    #ffd166;
+      --green:   #06d6a0;
+      --grad:    linear-gradient(135deg,#7c6dff 0%,#00d4ff 100%);
+      --grad2:   linear-gradient(135deg,#ff6b9d,#7c6dff);
+      --grad3:   linear-gradient(135deg,#ffd166,#ff6b9d);
+      --text:    #ecedf8;
+      --text2:   #8f94b8;
+      --text3:   #4a5070;
+      --r:       18px;
+      --r2:      26px;
+      --glow:    0 8px 40px rgba(124,109,255,0.25);
+      --glow2:   0 0 60px rgba(124,109,255,0.4);
+      --ease:    all 0.38s cubic-bezier(0.4,0,0.2,1);
     }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    ::selection { background: rgba(108,99,255,0.4); color: #fff; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+    ::selection { background: rgba(124,109,255,0.35); color: #fff; }
     a { color: inherit; text-decoration: none; }
-
-    /* ===== SCROLLBAR ===== */
-    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb { background: var(--p); border-radius: 3px; }
 
-    /* ===== CANVAS BACKGROUND ===== */
-    #bg-canvas {
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: 0; pointer-events: none;
-    }
+    /* ===== CANVAS ===== */
+    #bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 
     /* ===== LAYOUT ===== */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
 
     /* ===== NAV ===== */
     nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 0 32px;
-      height: 64px;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      height: 66px; padding: 0 36px;
       display: flex; align-items: center; justify-content: space-between;
-      background: rgba(5,8,16,0.7);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      transition: var(--transition);
+      background: rgba(3,5,15,0.6); backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border); transition: var(--ease);
     }
     .nav-logo {
-      font-size: 1.1rem; font-weight: 700; letter-spacing: -0.5px;
+      font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px;
       background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a {
-      font-size: 0.85rem; font-weight: 500; color: var(--text2);
-      transition: var(--transition); letter-spacing: 0.3px;
+    .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.84rem; font-weight: 500; color: var(--text2); transition: var(--ease); letter-spacing: 0.2px; }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-resume {
+      padding: 7px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700;
+      border: 1px solid var(--border2); color: var(--p2) !important; -webkit-text-fill-color: var(--p2) !important;
+      background: rgba(124,109,255,0.08); transition: var(--ease);
+      display: inline-flex; align-items: center; gap: 6px;
     }
-    .nav-links a:hover { color: var(--accent2); }
+    .nav-resume:hover { background: rgba(124,109,255,0.18); border-color: var(--p); transform: translateY(-1px); }
     .nav-cta {
-      padding: 8px 20px; border-radius: 50px;
-      background: var(--grad); color: #fff !important;
-      font-weight: 600; font-size: 0.82rem;
-      -webkit-text-fill-color: #fff !important;
-      transition: var(--transition);
-      box-shadow: 0 0 20px rgba(108,99,255,0.4);
+      padding: 8px 22px; border-radius: 50px; font-size: 0.82rem; font-weight: 700;
+      background: var(--grad); color: #fff !important; -webkit-text-fill-color: #fff !important;
+      box-shadow: 0 0 22px rgba(124,109,255,0.45); transition: var(--ease);
     }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 0 30px rgba(108,99,255,0.6); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 24px; height: 2px; background: var(--text2); border-radius: 2px; transition: var(--transition); }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(124,109,255,0.65); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 22px; height: 2px; background: var(--text2); border-radius: 2px; transition: var(--ease); display: block; }
 
-    /* ===== HERO ===== */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 120px 0 80px;
-      position: relative; overflow: hidden;
-    }
-    .hero-inner { display: flex; align-items: center; gap: 80px; width: 100%; }
-    .hero-text { flex: 1; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 16px; border-radius: 50px;
-      border: 1px solid rgba(108,99,255,0.4);
-      background: rgba(108,99,255,0.1);
-      font-size: 0.78rem; font-weight: 600; color: var(--accent2);
-      letter-spacing: 0.5px; margin-bottom: 24px;
-    }
-    .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #00d4ff; animation: pulse 2s ease infinite; }
-    .hero-name {
-      font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900;
-      line-height: 1.1; letter-spacing: -2px; margin-bottom: 12px;
-    }
-    .hero-gradient-text {
-      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-title {
-      font-size: clamp(1rem, 2.2vw, 1.35rem); font-weight: 500; color: var(--text2);
-      margin-bottom: 24px; line-height: 1.5;
-    }
-    .hero-title strong { color: var(--accent); font-weight: 700; }
-    .hero-desc { font-size: 1rem; color: var(--text2); max-width: 520px; margin-bottom: 40px; line-height: 1.8; }
-    .hero-metrics { display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
-    .metric {
-      display: flex; flex-direction: column;
-      border-left: 2px solid var(--accent); padding-left: 14px;
-    }
-    .metric-val { font-size: 1.8rem; font-weight: 900; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
-    .metric-label { font-size: 0.75rem; color: var(--text3); font-weight: 500; margin-top: 4px; }
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-primary {
-      padding: 14px 32px; border-radius: 50px;
-      background: var(--grad); color: #fff; font-weight: 700; font-size: 0.9rem;
-      display: inline-flex; align-items: center; gap: 8px;
-      box-shadow: 0 0 30px rgba(108,99,255,0.5);
-      transition: var(--transition); cursor: pointer; border: none;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(108,99,255,0.7); }
-    .btn-secondary {
-      padding: 13px 30px; border-radius: 50px;
-      border: 1px solid var(--border); background: var(--surface);
-      color: var(--text); font-weight: 600; font-size: 0.9rem;
-      display: inline-flex; align-items: center; gap: 8px;
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
-    }
-    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+    /* ===== READING PROGRESS ===== */
+    .prog { position: fixed; top: 66px; left: 0; height: 2px; z-index: 998; background: var(--grad); width: 0; transition: width 0.1s linear; }
 
-    /* HERO PHOTO */
-    .hero-photo-wrap {
-      flex-shrink: 0; position: relative;
-      width: 340px; height: 340px;
-    }
-    .hero-photo-ring {
-      position: absolute; inset: -14px;
-      border-radius: 50%; border: 2px solid transparent;
-      background: var(--grad) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      animation: spinRing 8s linear infinite;
-    }
-    .hero-photo-ring2 {
-      position: absolute; inset: -26px;
-      border-radius: 50%; border: 1px solid rgba(108,99,255,0.2);
-      animation: spinRing 12s linear infinite reverse;
-    }
-    .hero-photo {
-      width: 100%; height: 100%;
-      border-radius: 50%; object-fit: cover; object-position: top center;
-      border: 4px solid var(--bg2);
-      position: relative; z-index: 1;
-      box-shadow: 0 0 60px rgba(108,99,255,0.4);
-    }
-    .hero-orb {
-      position: absolute; width: 180px; height: 180px;
-      border-radius: 50%; filter: blur(60px);
-      background: rgba(108,99,255,0.6); top: -30px; right: -30px; z-index: 0;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    /* ===== SECTION COMMON ===== */
-    section { padding: 100px 0; position: relative; z-index: 1; }
-    .section-label {
+    /* ===== SECTION COMMONS ===== */
+    section { padding: 110px 0; position: relative; z-index: 1; }
+    .s-tag {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: 16px;
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--p2); margin-bottom: 14px;
     }
-    .section-label::before { content: ''; width: 30px; height: 2px; background: var(--grad); border-radius: 1px; }
-    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
-    .section-sub { font-size: 1rem; color: var(--text2); max-width: 560px; }
+    .s-tag::before { content: ''; width: 28px; height: 2px; background: var(--grad); border-radius: 1px; flex-shrink: 0; }
+    .s-title { font-size: clamp(1.9rem,3.5vw,2.9rem); font-weight: 800; letter-spacing: -1.2px; margin-bottom: 14px; line-height: 1.1; }
+    .s-sub { font-size: 0.97rem; color: var(--text2); max-width: 560px; line-height: 1.8; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-    /* ===== CARD ===== */
+    /* ===== 3D CARD ===== */
     .card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius2); padding: 32px;
-      backdrop-filter: blur(10px);
-      transition: var(--transition); position: relative; overflow: hidden;
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--r2); padding: 32px;
+      backdrop-filter: blur(16px);
+      position: relative; overflow: hidden;
+      transition: border-color 0.38s ease, transform 0.12s ease, box-shadow 0.38s ease;
+      transform-style: preserve-3d;
+      will-change: transform;
     }
     .card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--grad); opacity: 0; transition: var(--transition);
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1.5px;
+      background: var(--grad); opacity: 0; transition: opacity 0.38s ease;
     }
-    .card:hover { border-color: rgba(108,99,255,0.3); transform: translateY(-4px); box-shadow: var(--glow); }
+    .card::after {
+      content: ''; position: absolute; inset: 0; border-radius: var(--r2);
+      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(124,109,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .card:hover { border-color: rgba(124,109,255,0.35); box-shadow: var(--glow); }
     .card:hover::before { opacity: 1; }
+
+    /* Floating accent blobs behind sections */
+    .blob {
+      position: absolute; border-radius: 50%; filter: blur(100px);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ===== HERO ===== */
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 130px 0 90px; overflow: hidden; }
+    .hero-wrap { display: flex; align-items: center; gap: 72px; width: 100%; }
+    .hero-left { flex: 1; }
+
+    /* Greeting */
+    .hero-hello {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.5px;
+      color: var(--cyan); margin-bottom: 22px;
+      padding: 6px 18px; border-radius: 50px;
+      border: 1px solid rgba(0,212,255,0.25); background: rgba(0,212,255,0.06);
+    }
+    .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; flex-shrink: 0; }
+
+    .hero-name { font-size: clamp(2.5rem,5.5vw,4.2rem); font-weight: 900; letter-spacing: -2.5px; line-height: 1.0; margin-bottom: 16px; }
+    .hero-role { font-size: clamp(1rem,2vw,1.2rem); font-weight: 500; color: var(--text2); margin-bottom: 28px; line-height: 1.6; }
+    .hero-role strong { color: var(--p2); font-weight: 700; }
+
+    /* Specialisms bar */
+    .hero-spec { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+    .spec-chip {
+      padding: 7px 16px; border-radius: 50px; font-size: 0.78rem; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .spec-chip.a { border: 1px solid rgba(124,109,255,0.4); background: rgba(124,109,255,0.1); color: var(--p2); }
+    .spec-chip.b { border: 1px solid rgba(0,212,255,0.35); background: rgba(0,212,255,0.08); color: var(--cyan); }
+    .spec-chip.c { border: 1px solid rgba(6,214,160,0.35); background: rgba(6,214,160,0.08); color: var(--green); }
+    .spec-chip.d { border: 1px solid rgba(255,209,102,0.3); background: rgba(255,209,102,0.07); color: var(--gold); }
+
+    /* Typed */
+    .hero-typed { font-size: 0.95rem; color: var(--text2); margin-bottom: 36px; min-height: 28px; line-height: 1.7; }
+    #ttext { color: var(--cyan); font-weight: 600; }
+    .tcursor { display: inline-block; width: 2px; height: 0.9em; background: var(--cyan); margin-left: 3px; border-radius: 1px; animation: blink 1s ease infinite; vertical-align: middle; }
+
+    /* Metrics */
+    .hero-metrics { display: flex; gap: 28px; margin-bottom: 40px; flex-wrap: wrap; }
+    .metric { display: flex; flex-direction: column; padding-left: 14px; border-left: 2px solid var(--p); }
+    .m-val { font-size: 1.9rem; font-weight: 900; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; font-family: 'Space Mono', monospace; }
+    .m-lbl { font-size: 0.72rem; color: var(--text3); font-weight: 600; margin-top: 4px; letter-spacing: 0.3px; }
+
+    /* CTA buttons */
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-glow {
+      padding: 14px 30px; border-radius: 50px; background: var(--grad);
+      color: #fff; font-weight: 700; font-size: 0.88rem;
+      display: inline-flex; align-items: center; gap: 9px;
+      box-shadow: 0 0 30px rgba(124,109,255,0.5); transition: var(--ease); border: none; cursor: pointer;
+    }
+    .btn-glow:hover { transform: translateY(-3px); box-shadow: 0 0 55px rgba(124,109,255,0.7); }
+    .btn-ghost {
+      padding: 13px 26px; border-radius: 50px;
+      border: 1px solid var(--border); background: var(--glass2);
+      color: var(--text); font-weight: 600; font-size: 0.88rem;
+      display: inline-flex; align-items: center; gap: 9px;
+      backdrop-filter: blur(10px); transition: var(--ease);
+    }
+    .btn-ghost:hover { border-color: var(--p); color: var(--p2); transform: translateY(-3px); box-shadow: var(--glow); }
+    .btn-resume {
+      padding: 13px 26px; border-radius: 50px;
+      border: 1px solid rgba(255,209,102,0.3); background: rgba(255,209,102,0.06);
+      color: var(--gold); font-weight: 700; font-size: 0.88rem;
+      display: inline-flex; align-items: center; gap: 9px;
+      transition: var(--ease);
+    }
+    .btn-resume:hover { border-color: var(--gold); background: rgba(255,209,102,0.12); transform: translateY(-3px); box-shadow: 0 0 30px rgba(255,209,102,0.2); }
+
+    /* Photo */
+    .hero-right { flex-shrink: 0; position: relative; width: 360px; height: 360px; }
+    .photo-glow { position: absolute; inset: -20px; border-radius: 50%; background: radial-gradient(circle, rgba(124,109,255,0.5) 0%, transparent 70%); animation: pls-glow 4s ease infinite; }
+    .photo-ring1 {
+      position: absolute; inset: -12px; border-radius: 50%;
+      border: 2px solid transparent;
+      background: var(--grad) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      animation: spin 9s linear infinite;
+    }
+    .photo-ring2 { position: absolute; inset: -26px; border-radius: 50%; border: 1px solid rgba(124,109,255,0.18); animation: spin 14s linear infinite reverse; }
+    .photo-ring3 { position: absolute; inset: -42px; border-radius: 50%; border: 1px dashed rgba(0,212,255,0.1); animation: spin 20s linear infinite; }
+    .hero-img {
+      width: 100%; height: 100%; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 5px solid var(--bg2); position: relative; z-index: 2;
+      box-shadow: 0 0 70px rgba(124,109,255,0.45);
+    }
+    /* Floating 3D badges around photo */
+    .float-badge {
+      position: absolute; z-index: 3; padding: 8px 14px; border-radius: 14px;
+      font-size: 0.72rem; font-weight: 700;
+      backdrop-filter: blur(12px); white-space: nowrap;
+      animation: float-badge 5s ease-in-out infinite;
+    }
+    .fb1 {
+      top: 10px; left: -50px;
+      background: rgba(124,109,255,0.25); border: 1px solid rgba(124,109,255,0.4);
+      color: var(--p2); animation-delay: 0s;
+      box-shadow: 0 4px 20px rgba(124,109,255,0.2);
+    }
+    .fb2 {
+      bottom: 50px; right: -60px;
+      background: rgba(0,212,255,0.15); border: 1px solid rgba(0,212,255,0.3);
+      color: var(--cyan); animation-delay: 1.5s;
+      box-shadow: 0 4px 20px rgba(0,212,255,0.15);
+    }
+    .fb3 {
+      bottom: -10px; left: -20px;
+      background: rgba(6,214,160,0.15); border: 1px solid rgba(6,214,160,0.3);
+      color: var(--green); animation-delay: 3s;
+      box-shadow: 0 4px 20px rgba(6,214,160,0.15);
+    }
 
     /* ===== SKILLS ===== */
     #skills { background: var(--bg2); }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 60px; }
-    .skill-card-title {
-      font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--accent2); margin-bottom: 20px;
-      display: flex; align-items: center; gap: 10px;
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 22px; margin-top: 56px; }
+    .sk-head { font-size: 0.75rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--cyan); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .sk-icon { font-size: 1.15rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 6px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 600;
+      border: 1px solid var(--border); background: var(--glass); color: var(--text2);
+      transition: var(--ease); cursor: default;
     }
-    .skill-card-title .icon { font-size: 1.2rem; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skill-tag {
-      padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;
-      border: 1px solid var(--border); background: var(--surface2); color: var(--text2);
-      transition: var(--transition); cursor: default;
-    }
-    .skill-tag:hover { border-color: var(--accent); color: var(--accent); background: rgba(108,99,255,0.1); transform: scale(1.05); }
-    .skill-tag.hot { border-color: rgba(108,99,255,0.5); color: var(--accent); background: rgba(108,99,255,0.1); }
+    .tag:hover { border-color: var(--p); color: var(--p2); background: rgba(124,109,255,0.1); transform: scale(1.05) translateY(-1px); }
+    .tag.hot { border-color: rgba(124,109,255,0.45); color: var(--p2); background: rgba(124,109,255,0.1); }
+    .tag.hot2 { border-color: rgba(0,212,255,0.35); color: var(--cyan); background: rgba(0,212,255,0.07); }
+    .tag.hot3 { border-color: rgba(6,214,160,0.35); color: var(--green); background: rgba(6,214,160,0.07); }
 
     /* ===== EXPERIENCE ===== */
-    .timeline { position: relative; margin-top: 60px; }
-    .timeline::before {
-      content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px;
-      background: linear-gradient(to bottom, var(--accent), transparent);
+    .tl { position: relative; margin-top: 60px; }
+    .tl::before {
+      content: ''; position: absolute; left: 22px; top: 0; bottom: 0; width: 1.5px;
+      background: linear-gradient(to bottom, var(--p), rgba(124,109,255,0.1));
     }
-    .timeline-item { padding-left: 64px; margin-bottom: 48px; position: relative; }
-    .timeline-dot {
-      position: absolute; left: 10px; top: 6px;
-      width: 22px; height: 22px; border-radius: 50%;
+    .tl-item { padding-left: 70px; margin-bottom: 44px; position: relative; }
+    .tl-dot {
+      position: absolute; left: 11px; top: 8px;
+      width: 24px; height: 24px; border-radius: 50%;
       background: var(--grad); border: 3px solid var(--bg);
-      box-shadow: 0 0 16px rgba(108,99,255,0.6);
+      box-shadow: 0 0 18px rgba(124,109,255,0.65), 0 0 0 4px rgba(124,109,255,0.1);
     }
-    .exp-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; }
-    .exp-title { font-size: 1.15rem; font-weight: 700; color: var(--text); }
-    .exp-company { font-size: 0.95rem; font-weight: 600; color: var(--accent); }
-    .exp-date {
-      font-family: 'Space Mono', monospace; font-size: 0.75rem;
-      color: var(--text3); white-space: nowrap; margin-top: 4px;
-      padding: 4px 12px; border: 1px solid var(--border); border-radius: 50px;
+    .exp-now {
+      display: inline-flex; align-items: center; gap: 6px; margin-bottom: 14px;
+      padding: 4px 13px; border-radius: 50px; font-size: 0.72rem; font-weight: 700;
+      background: rgba(6,214,160,0.1); border: 1px solid rgba(6,214,160,0.3); color: var(--green);
     }
-    .exp-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 3px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 700;
-      background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3); color: var(--accent2);
-      margin-bottom: 12px;
+    .exp-now .ldot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; }
+    .exp-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+    .exp-title { font-size: 1.12rem; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
+    .exp-co { font-size: 0.92rem; font-weight: 600; color: var(--p2); margin-top: 2px; }
+    .exp-date-pill {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text3);
+      padding: 4px 13px; border: 1px solid var(--border); border-radius: 50px;
+      white-space: nowrap; flex-shrink: 0; margin-top: 4px;
     }
-    .exp-badge .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); animation: pulse 2s ease infinite; }
-    .exp-desc { color: var(--text2); font-size: 0.92rem; line-height: 1.85; }
-    .exp-achievements { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
-    .exp-achievements li {
-      display: flex; gap: 12px; align-items: flex-start;
-      font-size: 0.9rem; color: var(--text2);
+    /* ===== FIXED BULLET ALIGNMENT ===== */
+    .bullets { list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
+    .bullets li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 0;
+      align-items: start;
+      font-size: 0.9rem; color: var(--text2); line-height: 1.75;
     }
-    .exp-achievements li::before {
-      content: '▸'; color: var(--accent); font-size: 0.8rem; flex-shrink: 0; margin-top: 3px;
+    .bullets li .bull {
+      color: var(--p2); font-size: 0.75rem; padding-top: 4px;
+      display: flex; align-items: flex-start; justify-content: center;
     }
-    .exp-achievements li strong { color: var(--text); }
-    .exp-achievements li em { color: var(--accent2); font-style: normal; font-weight: 600; }
+    .bullets li .bull-text { flex: 1; }
+    .bullets li strong { color: var(--text); font-weight: 700; }
+    .bullets li em { color: var(--cyan); font-style: normal; font-weight: 700; }
+    .bullets li .tag-inline {
+      display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;
+      background: rgba(124,109,255,0.12); color: var(--p2); border: 1px solid rgba(124,109,255,0.25);
+      margin: 0 2px; vertical-align: middle;
+    }
+
+    /* ===== HIGHLIGHTS ===== */
+    #highlights { background: var(--bg2); }
+    .hl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 22px; margin-top: 56px; }
+    .hl-num { font-family: 'Space Mono', monospace; font-size: 3.2rem; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px; }
+    .hl-label { font-size: 0.88rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .hl-desc { font-size: 0.82rem; color: var(--text2); line-height: 1.75; }
+    .hl-icon { font-size: 1.6rem; margin-bottom: 14px; display: block; }
 
     /* ===== EDUCATION ===== */
-    #education { background: var(--bg2); }
-    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 60px; }
-    .edu-card { }
-    .edu-degree { font-size: 1.25rem; font-weight: 800; margin-bottom: 4px; }
-    .edu-field { font-size: 0.85rem; color: var(--accent2); font-weight: 600; margin-bottom: 12px; }
-    .edu-inst { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .edu-inst::before { content: '🏛'; font-size: 1rem; }
-    .edu-meta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 22px; margin-top: 56px; }
+    .edu-deg { font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
+    .edu-field { font-size: 0.84rem; color: var(--cyan); font-weight: 700; margin-bottom: 14px; }
+    .edu-inst { font-size: 0.95rem; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .edu-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
     .edu-chip {
-      padding: 4px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 600;
-      background: var(--surface2); border: 1px solid var(--border); color: var(--text2);
+      padding: 4px 14px; border-radius: 50px; font-size: 0.76rem; font-weight: 700;
+      background: var(--glass2); border: 1px solid var(--border); color: var(--text2);
     }
-    .edu-chip.cgpa { border-color: rgba(108,99,255,0.4); color: var(--accent); background: rgba(108,99,255,0.1); }
-    .edu-chip.ongoing { border-color: rgba(0,212,255,0.4); color: var(--accent2); background: rgba(0,212,255,0.1); animation: pulseBorder 2s ease infinite; }
-
-    /* ===== PROJECTS / HIGHLIGHT CARDS ===== */
-    #highlights { }
-    .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 60px; }
-    .highlight-number {
-      font-family: 'Space Mono', monospace; font-size: 3rem; font-weight: 700;
-      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      line-height: 1; margin-bottom: 8px;
-    }
-    .highlight-label { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-    .highlight-desc { font-size: 0.83rem; color: var(--text2); line-height: 1.7; }
+    .edu-chip.gpa { border-color: rgba(124,109,255,0.4); color: var(--p2); background: rgba(124,109,255,0.1); }
+    .edu-chip.live { border-color: rgba(6,214,160,0.4); color: var(--green); background: rgba(6,214,160,0.08); animation: pulse-border 2.5s ease infinite; }
 
     /* ===== CONTACT ===== */
     #contact { background: var(--bg2); }
-    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 60px; }
-    .contact-info-list { display: flex; flex-direction: column; gap: 20px; margin-top: 24px; }
-    .contact-item {
+    .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 60px; }
+    .avail-card {
+      padding: 26px; border-radius: var(--r2); margin-bottom: 24px;
+      background: linear-gradient(135deg, rgba(124,109,255,0.12), rgba(0,212,255,0.07));
+      border: 1px solid rgba(124,109,255,0.25);
+    }
+    .avail-ttl { font-weight: 800; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .green-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; flex-shrink: 0; }
+    .avail-body { font-size: 0.87rem; color: var(--text2); line-height: 1.8; }
+    .ct-list { display: flex; flex-direction: column; gap: 14px; }
+    .ct-item {
       display: flex; align-items: center; gap: 16px;
-      padding: 16px 20px; border-radius: var(--radius);
-      border: 1px solid var(--border); background: var(--surface);
-      backdrop-filter: blur(10px); transition: var(--transition);
+      padding: 15px 20px; border-radius: var(--r);
+      border: 1px solid var(--border); background: var(--glass);
+      backdrop-filter: blur(10px); transition: var(--ease);
     }
-    .contact-item:hover { border-color: var(--accent); transform: translateX(4px); }
-    .contact-icon {
-      width: 42px; height: 42px; border-radius: 10px;
+    .ct-item:hover { border-color: var(--p); transform: translateX(5px); box-shadow: var(--glow); }
+    .ct-ico {
+      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
       background: var(--grad); display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 0 16px rgba(108,99,255,0.4);
+      font-size: 1.05rem; box-shadow: 0 0 18px rgba(124,109,255,0.4);
     }
-    .contact-text-label { font-size: 0.72rem; color: var(--text3); font-weight: 600; letter-spacing: 0.5px; }
-    .contact-text-val { font-size: 0.9rem; font-weight: 600; color: var(--text); }
-    .contact-social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
-    .social-btn {
-      padding: 14px; border-radius: var(--radius);
-      border: 1px solid var(--border); background: var(--surface);
+    .ct-lbl { font-size: 0.7rem; color: var(--text3); font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 2px; }
+    .ct-val { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .soc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .soc-btn {
+      padding: 15px 20px; border-radius: var(--r);
+      border: 1px solid var(--border); background: var(--glass);
       display: flex; align-items: center; justify-content: center; gap: 10px;
-      font-weight: 600; font-size: 0.85rem; color: var(--text2);
-      transition: var(--transition); cursor: pointer;
+      font-weight: 700; font-size: 0.84rem; color: var(--text2);
+      transition: var(--ease); backdrop-filter: blur(10px);
     }
-    .social-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); box-shadow: var(--glow); }
-    .social-btn .sicon { font-size: 1.2rem; }
-    .availability-card {
-      padding: 24px; border-radius: var(--radius2);
-      background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,255,0.1));
-      border: 1px solid rgba(108,99,255,0.3);
-    }
-    .avail-dot { width: 10px; height: 10px; border-radius: 50%; background: #00e676; display: inline-block; animation: pulse 2s ease infinite; margin-right: 8px; }
-    .avail-title { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
-    .avail-text { font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
+    .soc-btn:hover { border-color: var(--p); color: var(--p2); transform: translateY(-3px); box-shadow: var(--glow); }
+    .soc-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .soc-btn.li:hover { border-color: #0a66c2; color: #5ba4e0; }
+    .soc-btn.mail:hover { border-color: var(--gold); color: var(--gold); }
 
     /* ===== FOOTER ===== */
-    footer {
-      position: relative; z-index: 1;
-      text-align: center; padding: 40px 24px;
-      border-top: 1px solid var(--border);
-      color: var(--text3); font-size: 0.82rem;
-    }
-    footer span { color: var(--accent); }
+    footer { position: relative; z-index: 1; text-align: center; padding: 44px 24px; border-top: 1px solid var(--border); color: var(--text3); font-size: 0.82rem; }
+    footer .hl { color: var(--p2); }
 
-    /* ===== ANIMATIONS ===== */
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.85)} }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
-    @keyframes spinRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-    @keyframes pulseBorder { 0%,100%{box-shadow:none} 50%{box-shadow:0 0 12px rgba(0,212,255,0.3)} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-
-    .fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-    .delay-5 { animation-delay: 0.5s; }
-
-    /* ===== OBSERVER-BASED REVEAL ===== */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .hero-inner { flex-direction: column-reverse; gap: 48px; text-align: center; }
-      .hero-photo-wrap { width: 240px; height: 240px; }
-      .hero-metrics { justify-content: center; }
-      .hero-actions { justify-content: center; }
-      .hero-desc { margin: 0 auto 40px; }
-      .contact-inner { grid-template-columns: 1fr; }
-      nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--bg2); padding: 24px; gap: 20px; border-bottom: 1px solid var(--border); }
-      .hamburger { display: flex; }
-    }
-    @media (max-width: 600px) {
-      .hero-name { letter-spacing: -1px; }
-      .contact-social-grid { grid-template-columns: 1fr; }
-      .timeline::before { left: 14px; }
-      .timeline-item { padding-left: 48px; }
-      .timeline-dot { left: 4px; width: 18px; height: 18px; }
-    }
-
-    /* ===== TYPED CURSOR ===== */
-    .typed-cursor { display: inline-block; width: 3px; height: 1em; background: var(--accent2); margin-left: 4px; border-radius: 1px; animation: blink 1s ease infinite; vertical-align: middle; }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
-    /* ===== PROGRESS BAR ===== */
-    .reading-progress {
-      position: fixed; top: 64px; left: 0; height: 2px; z-index: 200;
-      background: var(--grad); width: 0%; transition: width 0.1s linear;
-    }
-
-    /* ===== SCROLL TO TOP ===== */
-    #scrollTop {
-      position: fixed; bottom: 32px; right: 32px; z-index: 200;
-      width: 44px; height: 44px; border-radius: 50%;
+    /* ===== SCROLL TOP ===== */
+    #stop {
+      position: fixed; bottom: 30px; right: 30px; z-index: 997;
+      width: 46px; height: 46px; border-radius: 50%;
       background: var(--grad); border: none; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; color: #fff;
-      box-shadow: 0 0 20px rgba(108,99,255,0.5);
-      opacity: 0; transform: translateY(20px); transition: var(--transition);
+      color: #fff; font-size: 1rem; opacity: 0; transform: translateY(20px);
+      transition: var(--ease); box-shadow: 0 0 22px rgba(124,109,255,0.5);
     }
-    #scrollTop.show { opacity: 1; transform: translateY(0); }
-    #scrollTop:hover { transform: translateY(-4px); }
+    #stop.show { opacity: 1; transform: translateY(0); }
+    #stop:hover { transform: translateY(-4px); box-shadow: 0 0 36px rgba(124,109,255,0.7); }
 
-    /* ===== GLOW ORBS ===== */
-    .glow-orb {
-      position: absolute; border-radius: 50%; filter: blur(80px);
-      pointer-events: none; z-index: 0;
+    /* ===== KEYFRAMES ===== */
+    @keyframes pls { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.85)} }
+    @keyframes pls-glow { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.08)} }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+    @keyframes float-badge { 0%,100%{transform:translateY(0) translateX(0)} 50%{transform:translateY(-10px) translateX(3px)} }
+    @keyframes pulse-border { 0%,100%{box-shadow:none} 50%{box-shadow:0 0 14px rgba(6,214,160,0.3)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+
+    /* Initial reveal */
+    .fu { opacity:0; animation: fadeUp 0.75s ease forwards; }
+    .d1{animation-delay:0.05s} .d2{animation-delay:0.15s} .d3{animation-delay:0.25s}
+    .d4{animation-delay:0.35s} .d5{animation-delay:0.5s} .d6{animation-delay:0.65s}
+
+    /* Scroll reveal */
+    .rev { opacity:0; transform:translateY(36px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .rev.vis { opacity:1; transform:none; }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:920px){
+      .hero-wrap { flex-direction: column-reverse; gap: 52px; text-align: center; }
+      .hero-right { width: 260px; height: 260px; }
+      .fb1,.fb2,.fb3 { display: none; }
+      .hero-ctas { justify-content: center; }
+      .hero-metrics { justify-content: center; }
+      .hero-spec { justify-content: center; }
+      .hero-typed { text-align: center; }
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 66px; left: 0; right: 0; background: rgba(7,11,24,0.97); padding: 28px; gap: 22px; border-bottom: 1px solid var(--border); backdrop-filter: blur(24px); }
+      .hamburger { display: flex; }
+      .ct-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media(max-width:620px){
+      .hero-name { letter-spacing: -1.5px; }
+      .soc-grid { grid-template-columns: 1fr; }
+      .tl::before { left: 14px; }
+      .tl-item { padding-left: 50px; }
+      .tl-dot { left: 3px; width: 20px; height: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Reading Progress Bar -->
-  <div class="reading-progress" id="readingProgress"></div>
+<div class="prog" id="prog"></div>
+<canvas id="bg-canvas"></canvas>
 
-  <!-- Canvas Background -->
-  <canvas id="bg-canvas"></canvas>
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="nav-logo">Dinesh</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#highlights">Impact</a></li>
+    <li><a href="#education">Education</a></li>
+    <li>
+      <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="nav-resume">
+        ↓ Resume
+      </a>
+    </li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+  <div class="hamburger" id="burger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-logo">DST Paruchuri</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#highlights">Highlights</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-wrap">
+      <!-- LEFT -->
+      <div class="hero-left">
+        <div class="hero-hello fu d1">
+          <span class="pulse-dot"></span>
+          Open to Senior AI / GenAI Roles
+        </div>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <div class="hero-badge fade-up delay-1">
-            <span class="dot"></span>
-            Available for new opportunities
+        <h1 class="hero-name fu d2">
+          <span class="grad-text">Dinesh Sai Teja</span><br>Paruchuri
+        </h1>
+
+        <p class="hero-role fu d3">
+          <strong>AI Engineer</strong> at PwC India &nbsp;·&nbsp; <strong>3+ Years</strong> Building Production AI
+        </p>
+
+        <!-- Specialism chips -->
+        <div class="hero-spec fu d3">
+          <span class="spec-chip a">⚡ Agentic AI</span>
+          <span class="spec-chip b">🔍 RAG Pipelines</span>
+          <span class="spec-chip c">📊 Agentic Evaluation</span>
+          <span class="spec-chip d">🧪 RAG Evaluation</span>
+        </div>
+
+        <p class="hero-typed fu d4">
+          Currently: <span id="ttext"></span><span class="tcursor"></span>
+        </p>
+
+        <!-- Metrics -->
+        <div class="hero-metrics fu d4">
+          <div class="metric">
+            <span class="m-val">87%</span>
+            <span class="m-lbl">Chatbot Accuracy</span>
           </div>
-          <h1 class="hero-name fade-up delay-2">
-            <span class="hero-gradient-text">Dinesh Sai Teja</span><br>Paruchuri
-          </h1>
-          <p class="hero-title fade-up delay-3">
-            <strong>AI Engineer</strong> · Generative AI · RAG · <strong>Agentic Systems</strong>
-          </p>
-          <p class="hero-desc fade-up delay-4">
-            Building production-grade AI systems at <strong style="color:var(--accent)">PwC India</strong>. 
-            Specialist in LLM orchestration, multi-agent architectures, hybrid RAG pipelines and LLM evaluation frameworks.
-            <span id="typed-text"></span><span class="typed-cursor"></span>
-          </p>
-          <div class="hero-metrics fade-up delay-4">
-            <div class="metric">
-              <span class="metric-val">3+</span>
-              <span class="metric-label">Years in AI</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">87%</span>
-              <span class="metric-label">Chatbot Accuracy</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">55+</span>
-              <span class="metric-label">Countries Covered</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">&lt;10s</span>
-              <span class="metric-label">Query Latency</span>
-            </div>
+          <div class="metric">
+            <span class="m-val">75%</span>
+            <span class="m-lbl">RAG Retrieval</span>
           </div>
-          <div class="hero-actions fade-up delay-5">
-            <a href="#contact" class="btn-primary">
-              ✦ Let's Connect
-            </a>
-            <a href="#experience" class="btn-secondary">
-              View Experience →
-            </a>
+          <div class="metric">
+            <span class="m-val">55+</span>
+            <span class="m-lbl">Countries Served</span>
+          </div>
+          <div class="metric">
+            <span class="m-val">&lt;10s</span>
+            <span class="m-lbl">Query Latency</span>
           </div>
         </div>
-        <div class="hero-photo-wrap fade-up delay-2">
-          <div class="hero-orb"></div>
-          <div class="hero-photo-ring2"></div>
-          <div class="hero-photo-ring"></div>
-          <img src="photo.jpeg" alt="Dinesh Sai Teja Paruchuri - AI Engineer" class="hero-photo" />
+
+        <!-- CTAs -->
+        <div class="hero-ctas fu d5">
+          <a href="#contact" class="btn-glow">✦ Let's Connect</a>
+          <a href="#experience" class="btn-ghost">Experience →</a>
+          <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="btn-resume">↓ Resume</a>
         </div>
+      </div>
+
+      <!-- RIGHT: Photo -->
+      <div class="hero-right fu d2">
+        <div class="photo-glow"></div>
+        <div class="photo-ring3"></div>
+        <div class="photo-ring2"></div>
+        <div class="photo-ring1"></div>
+        <img src="photo.jpeg" alt="Dinesh Sai Teja Paruchuri — AI Engineer, PwC India" class="hero-img" />
+        <!-- Floating badges -->
+        <div class="float-badge fb1">⚡ LangGraph Multi-Agent</div>
+        <div class="float-badge fb2">🔍 Hybrid RAG · RRF</div>
+        <div class="float-badge fb3">📊 MLflow Evaluation</div>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- Background blobs -->
+  <div class="blob" style="width:500px;height:500px;background:rgba(124,109,255,0.12);top:-100px;right:-100px;"></div>
+  <div class="blob" style="width:300px;height:300px;background:rgba(0,212,255,0.08);bottom:-50px;left:-80px;"></div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">Technical Expertise</div>
-        <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-sub">Cutting-edge AI/ML stack with a focus on production-ready Generative AI systems.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="card reveal">
-          <div class="skill-card-title"><span class="icon">🤖</span> LLM & AI Frameworks</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">LangGraph</span>
-            <span class="skill-tag hot">LangChain</span>
-            <span class="skill-tag hot">LlamaIndex</span>
-            <span class="skill-tag">RAG</span>
-            <span class="skill-tag hot">Agentic AI</span>
-            <span class="skill-tag">Function Calling</span>
-            <span class="skill-tag">Prompt Engineering</span>
-            <span class="skill-tag">LLM Evaluation</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="skill-card-title"><span class="icon">☁️</span> Cloud & Infrastructure</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">AWS Bedrock</span>
-            <span class="skill-tag hot">AWS OpenSearch</span>
-            <span class="skill-tag">AWS Lambda</span>
-            <span class="skill-tag">AWS S3</span>
-            <span class="skill-tag">AWS ECS</span>
-            <span class="skill-tag">Microsoft Azure</span>
-            <span class="skill-tag">ArgoCD</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div class="skill-card-title"><span class="icon">⚙️</span> Engineering & Tools</div>
-          <div class="skill-tags">
-            <span class="skill-tag hot">Python</span>
-            <span class="skill-tag">MLflow</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">Streamlit</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">ServiceNow</span>
-          </div>
-        </div>
-      </div>
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="rev">
+      <div class="s-tag">Technical Arsenal</div>
+      <h2 class="s-title">Skills &amp; <span class="grad-text">Technologies</span></h2>
+      <p class="s-sub">Production-grade AI/ML stack with deep focus on Agentic systems, RAG evaluation and enterprise LLM deployment.</p>
     </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">Career Journey</div>
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-sub">Delivering measurable AI impact in enterprise-grade production environments.</p>
-      </div>
-      <div class="timeline">
-        <!-- Current Role -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="exp-badge"><span class="live-dot"></span> Currently Here</div>
-            <div class="exp-header">
-              <div>
-                <div class="exp-title">AI Engineer — Generative AI, RAG & Agentic AI</div>
-                <div class="exp-company">PwC India</div>
-              </div>
-              <div class="exp-date">Jul 2023 — Present</div>
-            </div>
-            <ul class="exp-achievements">
-              <li>Architected a <strong>LangGraph Supervisor-Worker multi-agent chatbot</strong> for a global pharma client — complex query orchestration across specialized sub-agents.</li>
-              <li>Deployed <strong>adaptive RAG</strong> with <em>Hybrid Search + RRF</em> achieving <em>sub-10s query latency</em> and <em>75% retrieval accuracy</em> in production.</li>
-              <li>Built <strong>Global E&C Regulatory Navigator</strong> covering <em>55+ countries</em> using Chain-of-Thought prompting on AWS Bedrock.</li>
-              <li>Designed <strong>T&E Knowledge Chatbot</strong> on AWS Lambda + OpenSearch with <em>87% answer accuracy</em>.</li>
-              <li>Built <strong>MLflow-integrated LLM evaluation framework</strong> tracking <em>6 mission-critical metrics</em>: RAG Answer Faithfulness, Agent Trajectory, Tool Call Accuracy, and more.</li>
-              <li>Integrated <strong>ServiceNow (SNOW)</strong> for automated ticket resolution within agentic pipelines.</li>
-            </ul>
-          </div>
+    <div class="skills-grid">
+      <div class="card rev">
+        <div class="sk-head"><span class="sk-icon">🤖</span> Agentic &amp; LLM</div>
+        <div class="tags">
+          <span class="tag hot">LangGraph</span>
+          <span class="tag hot">Agentic AI</span>
+          <span class="tag hot">Agentic Evaluation</span>
+          <span class="tag hot">Multi-Agent Systems</span>
+          <span class="tag hot">LangChain</span>
+          <span class="tag hot">LlamaIndex</span>
+          <span class="tag">Function Calling</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Chain-of-Thought</span>
         </div>
-        <!-- Intern Role -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="card">
-            <div class="exp-header">
-              <div>
-                <div class="exp-title">Intern — Generative AI & RAG</div>
-                <div class="exp-company">PwC India</div>
-              </div>
-              <div class="exp-date">Jan 2023 — Jul 2023</div>
-            </div>
-            <ul class="exp-achievements">
-              <li>Developed POC for <strong>Function Calling</strong> using <em>GPT-3 and GPT-3.5</em> — early-stage exploration of structured LLM outputs.</li>
-              <li>Contributed to backend <strong>RAG pipelines</strong> with both unstructured and structured data ingestion and retrieval.</li>
-            </ul>
-          </div>
+      </div>
+      <div class="card rev">
+        <div class="sk-head"><span class="sk-icon">🔍</span> RAG &amp; Evaluation</div>
+        <div class="tags">
+          <span class="tag hot2">RAG Pipelines</span>
+          <span class="tag hot2">RAG Evaluation</span>
+          <span class="tag hot2">Hybrid Search</span>
+          <span class="tag hot2">Adaptive RAG</span>
+          <span class="tag hot2">RRF (Rank Fusion)</span>
+          <span class="tag hot2">RAGAS Framework</span>
+          <span class="tag">MLflow + LLM Evals</span>
+          <span class="tag">Answer Faithfulness</span>
+          <span class="tag">Agent Trajectory</span>
+        </div>
+      </div>
+      <div class="card rev">
+        <div class="sk-head"><span class="sk-icon">☁️</span> Cloud &amp; Infra</div>
+        <div class="tags">
+          <span class="tag hot">AWS Bedrock</span>
+          <span class="tag hot">AWS OpenSearch</span>
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">AWS S3</span>
+          <span class="tag">AWS ECS</span>
+          <span class="tag">Microsoft Azure</span>
+          <span class="tag">ArgoCD</span>
+          <span class="tag">ServiceNow</span>
+        </div>
+      </div>
+      <div class="card rev">
+        <div class="sk-head"><span class="sk-icon">⚙️</span> Engineering &amp; Dev</div>
+        <div class="tags">
+          <span class="tag hot3">Python</span>
+          <span class="tag">MLflow</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Git</span>
+          <span class="tag">Vector Databases</span>
+          <span class="tag">CI/CD Pipelines</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- HIGHLIGHTS / KEY METRICS -->
-  <section id="highlights" style="background:var(--bg2);">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">Impact Numbers</div>
-        <h2 class="section-title">Key Achievements</h2>
-        <p class="section-sub">Real, verified metrics from production deployments — no fabrication.</p>
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="wrap">
+    <div class="rev">
+      <div class="s-tag">Career Journey</div>
+      <h2 class="s-title">Work <span class="grad-text">Experience</span></h2>
+      <p class="s-sub">Delivering measurable GenAI impact at enterprise scale — from agentic pipelines to production RAG evaluation.</p>
+    </div>
+
+    <div class="tl">
+      <!-- Role 1: Current -->
+      <div class="tl-item rev">
+        <div class="tl-dot"></div>
+        <div class="card">
+          <div class="exp-now"><span class="ldot"></span> Currently Here · Full-Time</div>
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">AI Engineer — Generative AI, RAG &amp; Agentic AI</div>
+              <div class="exp-co">PwC India &nbsp;·&nbsp; Bengaluru</div>
+            </div>
+            <div class="exp-date-pill">Jul 2023 — Present</div>
+          </div>
+          <ul class="bullets">
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Architected a production <strong>LangGraph Supervisor-Worker multi-agent chatbot</strong> for a global pharma client — orchestrating specialised sub-agents for complex regulatory queries with <span class="tag-inline">Agentic AI</span></span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Built end-to-end <strong>Agentic Evaluation framework</strong> using MLflow, tracking <em>6 mission-critical metrics</em>: Agent Trajectory, Tool Call Accuracy, RAG Answer Faithfulness, Context Precision, Response Relevance &amp; Hallucination Rate</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Deployed <strong>Adaptive RAG</strong> with <em>Hybrid Search + Reciprocal Rank Fusion (RRF)</em> on AWS OpenSearch achieving <em>sub-10s end-to-end latency</em> and <em>75% retrieval accuracy</em> in production</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Implemented comprehensive <strong>RAG Evaluation</strong> pipeline with RAGAS — benchmarking Answer Faithfulness, Context Recall and Groundedness across diverse enterprise corpora</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Built <strong>Global E&amp;C Regulatory Navigator</strong> covering <em>55+ countries</em> using Chain-of-Thought (CoT) prompting on <span class="tag-inline">AWS Bedrock</span> with structured multi-step reasoning</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Designed <strong>T&amp;E Knowledge Chatbot</strong> on AWS Lambda + OpenSearch serverless — achieved <em>87% answer accuracy</em> serving enterprise travel &amp; expense queries at scale</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Integrated <strong>ServiceNow (SNOW)</strong> APIs within agentic pipelines for automated ticket creation, routing and resolution — reducing manual intervention by significant margins</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Managed <strong>CI/CD pipelines</strong> for LLM applications using ArgoCD on AWS ECS — ensuring reproducible, zero-downtime production deployments across multiple client environments</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="highlights-grid">
-        <div class="card reveal">
-          <div class="highlight-number">&lt;10s</div>
-          <div class="highlight-label">Query Latency</div>
-          <div class="highlight-desc">Sub-10 second end-to-end latency achieved in production RAG deployment using Hybrid Search with Reciprocal Rank Fusion.</div>
-        </div>
-        <div class="card reveal">
-          <div class="highlight-number">75%</div>
-          <div class="highlight-label">Retrieval Accuracy</div>
-          <div class="highlight-desc">Achieved via Hybrid Search + RRF on AWS OpenSearch — benchmarked across diverse pharma regulatory corpora.</div>
-        </div>
-        <div class="card reveal">
-          <div class="highlight-number">87%</div>
-          <div class="highlight-label">Chatbot Answer Accuracy</div>
-          <div class="highlight-desc">T&E Knowledge Chatbot deployed on AWS Lambda + OpenSearch, serving enterprise-scale travel and expense queries.</div>
-        </div>
-        <div class="card reveal">
-          <div class="highlight-number">55+</div>
-          <div class="highlight-label">Countries Covered</div>
-          <div class="highlight-desc">Global E&C Regulatory Navigator built with Chain-of-Thought prompting covering compliance across 55+ jurisdictions.</div>
-        </div>
-        <div class="card reveal">
-          <div class="highlight-number">6</div>
-          <div class="highlight-label">Evaluation Metrics</div>
-          <div class="highlight-desc">MLflow-integrated LLM evaluation framework tracking RAG Answer Faithfulness, Agent Trajectory, Tool Call Accuracy, and more.</div>
-        </div>
-        <div class="card reveal">
-          <div class="highlight-number">3+</div>
-          <div class="highlight-label">Years of AI Experience</div>
-          <div class="highlight-desc">End-to-end delivery of enterprise AI systems — from POC to production — at one of the world's top consulting firms.</div>
+
+      <!-- Role 2: Intern -->
+      <div class="tl-item rev">
+        <div class="tl-dot"></div>
+        <div class="card">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Intern — Generative AI &amp; RAG</div>
+              <div class="exp-co">PwC India &nbsp;·&nbsp; Bengaluru</div>
+            </div>
+            <div class="exp-date-pill">Jan 2023 — Jul 2023</div>
+          </div>
+          <ul class="bullets">
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Developed POC for <strong>Function Calling</strong> using <em>GPT-3 &amp; GPT-3.5</em> — early-stage research into structured LLM outputs and tool-use patterns that laid the foundation for later agentic systems</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Contributed to backend <strong>RAG pipelines</strong> handling both unstructured (PDFs, docs) and structured (SQL, JSON) data — building chunking, embedding and retrieval components from scratch</span>
+            </li>
+            <li>
+              <span class="bull">▸</span>
+              <span class="bull-text">Explored <strong>vector similarity search</strong> strategies and embedding model comparisons to optimise retrieval quality for enterprise knowledge bases</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">Academic Background</div>
-        <h2 class="section-title">Education</h2>
-        <p class="section-sub">Strong academic foundation bridging electronics, software, and artificial intelligence.</p>
+<!-- ===== HIGHLIGHTS ===== -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="rev">
+      <div class="s-tag">Proven Impact</div>
+      <h2 class="s-title">Key <span class="grad-text">Achievements</span></h2>
+      <p class="s-sub">Real, verified production metrics — zero fabrication. Every number is from live enterprise deployments.</p>
+    </div>
+    <div class="hl-grid">
+      <div class="card rev">
+        <span class="hl-icon">⚡</span>
+        <div class="hl-num">&lt;10s</div>
+        <div class="hl-label">End-to-End Query Latency</div>
+        <div class="hl-desc">Sub-10s RAG response time in production via Hybrid Search + RRF on AWS OpenSearch — optimised chunking &amp; caching strategy.</div>
       </div>
-      <div class="edu-grid">
-        <div class="card edu-card reveal">
-          <div class="edu-degree">M.Tech</div>
-          <div class="edu-field">Artificial Intelligence & Machine Learning (WILP)</div>
-          <div class="edu-inst">BITS Pilani</div>
-          <div class="edu-meta">
-            <span class="edu-chip cgpa">CGPA: 8.235 / 10</span>
-            <span class="edu-chip ongoing">🟢 Ongoing</span>
-            <span class="edu-chip">2025 – 2027</span>
+      <div class="card rev">
+        <span class="hl-icon">🎯</span>
+        <div class="hl-num">75%</div>
+        <div class="hl-label">RAG Retrieval Accuracy</div>
+        <div class="hl-desc">Achieved via Adaptive RAG with Hybrid (BM25 + Semantic) Search and Reciprocal Rank Fusion — benchmarked on pharma regulatory data.</div>
+      </div>
+      <div class="card rev">
+        <span class="hl-icon">🤖</span>
+        <div class="hl-num">87%</div>
+        <div class="hl-label">Agentic Chatbot Accuracy</div>
+        <div class="hl-desc">T&amp;E Knowledge Chatbot on AWS Lambda + OpenSearch — measured via RAG Evaluation with Answer Faithfulness &amp; Relevance scoring.</div>
+      </div>
+      <div class="card rev">
+        <span class="hl-icon">🌍</span>
+        <div class="hl-num">55+</div>
+        <div class="hl-label">Countries Covered</div>
+        <div class="hl-desc">E&amp;C Regulatory Navigator built with CoT prompting on AWS Bedrock — covering global compliance jurisdictions for a Big-4 client.</div>
+      </div>
+      <div class="card rev">
+        <span class="hl-icon">📊</span>
+        <div class="hl-num">6</div>
+        <div class="hl-label">Evaluation Metrics Tracked</div>
+        <div class="hl-desc">MLflow-integrated LLM &amp; Agentic Evaluation framework: Agent Trajectory, Tool Call Accuracy, Faithfulness, Context Precision, Relevance, Hallucination Rate.</div>
+      </div>
+      <div class="card rev">
+        <span class="hl-icon">🏢</span>
+        <div class="hl-num">3+</div>
+        <div class="hl-label">Years Building Production AI</div>
+        <div class="hl-desc">Full-stack AI delivery at PwC India — from POC to production deployment — serving global pharma, finance and consulting clients.</div>
+      </div>
+    </div>
+  </div>
+  <div class="blob" style="width:400px;height:400px;background:rgba(0,212,255,0.06);top:-80px;left:-100px;"></div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <div class="wrap">
+    <div class="rev">
+      <div class="s-tag">Academic Foundation</div>
+      <h2 class="s-title">Education</h2>
+      <p class="s-sub">Strong academic base bridging signal processing, software engineering and artificial intelligence.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="card rev">
+        <div class="edu-deg">M.Tech</div>
+        <div class="edu-field">Artificial Intelligence &amp; Machine Learning (WILP)</div>
+        <div class="edu-inst">🏛️ BITS Pilani</div>
+        <div class="edu-chips">
+          <span class="edu-chip gpa">CGPA: 8.235 / 10</span>
+          <span class="edu-chip live">🟢 Ongoing</span>
+          <span class="edu-chip">2025 – 2027</span>
+        </div>
+      </div>
+      <div class="card rev">
+        <div class="edu-deg">B.Tech</div>
+        <div class="edu-field">Electronics &amp; Communication Engineering</div>
+        <div class="edu-inst">🏛️ VIT, Andhra Pradesh</div>
+        <div class="edu-chips">
+          <span class="edu-chip gpa">CGPA: 9.54 / 10</span>
+          <span class="edu-chip">Class of 2023</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="rev">
+      <div class="s-tag">Get In Touch</div>
+      <h2 class="s-title">Let's Build Something<br><span class="grad-text">Remarkable Together</span></h2>
+      <p class="s-sub">Looking for senior AI Engineering roles — Agentic AI, RAG systems, LLM Evaluation. Remote or Bengaluru.</p>
+    </div>
+    <div class="ct-grid">
+      <div>
+        <div class="avail-card rev">
+          <div class="avail-ttl"><span class="green-dot"></span> Open to Opportunities</div>
+          <div class="avail-body">
+            Actively exploring roles in <strong>Agentic AI, GenAI Engineering &amp; LLM Systems</strong>.<br>
+            Target CTC: <strong>16–18 LPA</strong>&nbsp;·&nbsp; Preferred: <strong>Remote or Bengaluru</strong><br>
+            Notice Period: <strong>Immediate to 30 days</strong>
           </div>
         </div>
-        <div class="card edu-card reveal">
-          <div class="edu-degree">B.Tech</div>
-          <div class="edu-field">Electronics & Communication Engineering</div>
-          <div class="edu-inst">VIT, Andhra Pradesh</div>
-          <div class="edu-meta">
-            <span class="edu-chip cgpa">CGPA: 9.54 / 10</span>
-            <span class="edu-chip">Class of 2023</span>
+        <div class="ct-list">
+          <a href="mailto:dineshsaiteja.p@gmail.com" class="ct-item rev">
+            <div class="ct-ico">📧</div>
+            <div>
+              <div class="ct-lbl">Email</div>
+              <div class="ct-val">dineshsaiteja.p@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+919100364091" class="ct-item rev">
+            <div class="ct-ico">📱</div>
+            <div>
+              <div class="ct-lbl">Phone</div>
+              <div class="ct-val">+91-9100364091</div>
+            </div>
+          </a>
+          <div class="ct-item rev">
+            <div class="ct-ico">📍</div>
+            <div>
+              <div class="ct-lbl">Location</div>
+              <div class="ct-val">Bengaluru, Karnataka, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="soc-grid rev">
+          <!-- LinkedIn with proper SVG icon -->
+          <a href="https://linkedin.com/in/dineshsaitejap" target="_blank" rel="noopener" class="soc-btn li">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <!-- Gmail icon -->
+          <a href="mailto:dineshsaiteja.p@gmail.com" class="soc-btn mail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+            </svg>
+            Email Me
+          </a>
+        </div>
+
+        <!-- Resume download card -->
+        <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="card rev" style="display:block; margin-bottom:18px; text-align:center; border-color:rgba(255,209,102,0.25); background:rgba(255,209,102,0.05);">
+          <div style="font-size:2rem; margin-bottom:10px;">📄</div>
+          <div style="font-weight:800; font-size:1rem; color:var(--gold); margin-bottom:6px;">View / Download Resume</div>
+          <div style="font-size:0.8rem; color:var(--text3);">Full CV · Google Drive · Always up to date</div>
+        </a>
+
+        <div class="card rev" style="padding:24px;">
+          <p style="font-size:0.72rem;color:var(--text3);margin-bottom:14px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;">Core Specialisms</p>
+          <div class="tags">
+            <span class="tag hot">Agentic AI</span>
+            <span class="tag hot">Multi-Agent LangGraph</span>
+            <span class="tag hot2">RAG Evaluation</span>
+            <span class="tag hot2">Agentic Evaluation</span>
+            <span class="tag hot3">AWS Bedrock</span>
+            <span class="tag">MLflow LLM Evals</span>
+            <span class="tag">Prompt Engineering</span>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="blob" style="width:450px;height:450px;background:rgba(124,109,255,0.07);bottom:-100px;right:-80px;"></div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">Get In Touch</div>
-        <h2 class="section-title">Let's Build Something<br><span class="hero-gradient-text">Remarkable</span></h2>
-        <p class="section-sub">Open to Senior AI Engineer, LLM Engineer and GenAI roles (Remote / Bengaluru).</p>
-      </div>
-      <div class="contact-inner">
-        <div>
-          <div class="availability-card reveal">
-            <div class="avail-title"><span class="avail-dot"></span>Open to Opportunities</div>
-            <div class="avail-text">
-              Actively exploring senior roles in <strong>AI Engineering, GenAI and Agentic AI</strong>. 
-              Target: <strong>30–50 LPA</strong>. Preferred: <strong>Remote or Bengaluru</strong>. 
-              Notice period: Negotiable.
-            </div>
-          </div>
-          <div class="contact-info-list">
-            <a href="mailto:dineshsaiteja.p@gmail.com" class="contact-item reveal">
-              <div class="contact-icon">📧</div>
-              <div>
-                <div class="contact-text-label">Email</div>
-                <div class="contact-text-val">dineshsaiteja.p@gmail.com</div>
-              </div>
-            </a>
-            <a href="tel:+919100364091" class="contact-item reveal">
-              <div class="contact-icon">📱</div>
-              <div>
-                <div class="contact-text-label">Phone</div>
-                <div class="contact-text-val">+91-9100364091</div>
-              </div>
-            </a>
-            <div class="contact-item reveal">
-              <div class="contact-icon">📍</div>
-              <div>
-                <div class="contact-text-label">Location</div>
-                <div class="contact-text-val">Bengaluru, Karnataka, India</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="section-sub reveal" style="margin-bottom:24px">Connect with me on social platforms — let's collaborate on the next frontier of AI.</p>
-          <div class="contact-social-grid">
-            <a href="https://linkedin.com/in/dineshsaitejap" target="_blank" rel="noopener" class="social-btn reveal">
-              <span class="sicon">💼</span> LinkedIn
-            </a>
-            <a href="mailto:dineshsaiteja.p@gmail.com" class="social-btn reveal">
-              <span class="sicon">✉️</span> Email Me
-            </a>
-          </div>
-          <div class="card reveal" style="margin-top:24px; padding:24px;">
-            <p style="font-size:0.82rem; color:var(--text3); margin-bottom:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Core Competencies</p>
-            <div class="skill-tags">
-              <span class="skill-tag hot">Multi-Agent Systems</span>
-              <span class="skill-tag hot">RAG Pipelines</span>
-              <span class="skill-tag hot">LLM Evaluation</span>
-              <span class="skill-tag">AWS Bedrock</span>
-              <span class="skill-tag">LangGraph</span>
-              <span class="skill-tag">Prompt Engineering</span>
-              <span class="skill-tag">MLflow</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>Crafted with ❤️ by <span class="hl">Dinesh Sai Teja Paruchuri</span> &nbsp;·&nbsp; AI Engineer @ PwC India &nbsp;·&nbsp; Bengaluru</p>
+  <p style="margin-top:8px;">© 2025 &nbsp;·&nbsp; Built with pure HTML, CSS &amp; JS &nbsp;·&nbsp; <a href="https://linkedin.com/in/dineshsaitejap" style="color:var(--p2);">linkedin.com/in/dineshsaitejap</a></p>
+</footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Crafted with ❤️ by <span>Dinesh Sai Teja Paruchuri</span> · AI Engineer at PwC India · Bengaluru, India</p>
-    <p style="margin-top:8px;">© 2024 All rights reserved · Built with pure HTML, CSS & JavaScript</p>
-  </footer>
+<!-- Scroll top -->
+<button id="stop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
-  <!-- Scroll to Top -->
-  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+<script>
+/* ===== PARTICLE CANVAS ===== */
+(function(){
+  const c = document.getElementById('bg-canvas');
+  const x = c.getContext('2d');
+  let W, H, pts = [], mouse = {x:-2000,y:-2000};
 
-  <script>
-    /* ===== PARTICLE CANVAS ===== */
-    (function(){
-      const canvas = document.getElementById('bg-canvas');
-      const ctx = canvas.getContext('2d');
-      let W, H, particles = [], mouse = {x:-1000, y:-1000};
+  function resize(){ W = c.width = innerWidth; H = c.height = innerHeight; }
+  resize(); addEventListener('resize', resize);
 
-      function resize(){
-        W = canvas.width = window.innerWidth;
-        H = canvas.height = window.innerHeight;
-      }
-      resize();
-
-      function Particle(){
-        this.reset();
-      }
-      Particle.prototype.reset = function(){
-        this.x = Math.random() * W;
-        this.y = Math.random() * H;
-        this.r = Math.random() * 1.5 + 0.3;
-        this.vx = (Math.random() - 0.5) * 0.3;
-        this.vy = (Math.random() - 0.5) * 0.3;
-        this.alpha = Math.random() * 0.5 + 0.1;
-        this.color = Math.random() > 0.5 ? '108,99,255' : '0,212,255';
-      };
-
-      for(let i=0;i<120;i++) particles.push(new Particle());
-
-      function draw(){
-        ctx.clearRect(0,0,W,H);
-        particles.forEach(function(p){
-          // Mouse repel
-          let dx = p.x - mouse.x, dy = p.y - mouse.y;
-          let dist = Math.sqrt(dx*dx+dy*dy);
-          if(dist < 120){
-            p.vx += dx/dist * 0.5;
-            p.vy += dy/dist * 0.5;
-          }
-          p.vx *= 0.99; p.vy *= 0.99;
-          p.x += p.vx; p.y += p.vy;
-          if(p.x<0||p.x>W||p.y<0||p.y>H) p.reset();
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-          ctx.fillStyle = 'rgba('+p.color+','+p.alpha+')';
-          ctx.fill();
-        });
-
-        // Draw connecting lines
-        for(let i=0;i<particles.length;i++){
-          for(let j=i+1;j<particles.length;j++){
-            let dx = particles[i].x-particles[j].x;
-            let dy = particles[i].y-particles[j].y;
-            let d = Math.sqrt(dx*dx+dy*dy);
-            if(d<120){
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = 'rgba(108,99,255,'+(0.12*(1-d/120))+')';
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(draw);
-      }
-      draw();
-      window.addEventListener('resize', resize);
-      document.addEventListener('mousemove', function(e){ mouse.x=e.clientX; mouse.y=e.clientY; });
-    })();
-
-    /* ===== TYPED TEXT ===== */
-    (function(){
-      const el = document.getElementById('typed-text');
-      const texts = [
-        'Building Multi-Agent Systems.',
-        'Optimizing RAG Pipelines.',
-        'Shipping LLM to Production.',
-        'Evaluating AI at Scale.',
-      ];
-      let ti=0, ci=0, deleting=false;
-      function type(){
-        let current = texts[ti];
-        if(!deleting){
-          el.textContent = current.slice(0, ++ci);
-          if(ci===current.length){ deleting=true; setTimeout(type,1800); return; }
-        } else {
-          el.textContent = current.slice(0, --ci);
-          if(ci===0){ deleting=false; ti=(ti+1)%texts.length; }
-        }
-        setTimeout(type, deleting ? 40 : 65);
-      }
-      setTimeout(type, 1200);
-    })();
-
-    /* ===== SCROLL REVEAL ===== */
-    (function(){
-      const els = document.querySelectorAll('.reveal');
-      const obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
-        });
-      }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-      els.forEach(function(el){ obs.observe(el); });
-    })();
-
-    /* ===== READING PROGRESS ===== */
-    window.addEventListener('scroll', function(){
-      const scrolled = window.scrollY;
-      const height = document.body.scrollHeight - window.innerHeight;
-      document.getElementById('readingProgress').style.width = (scrolled/height*100)+'%';
-      // Scroll to top button
-      const btn = document.getElementById('scrollTop');
-      if(scrolled > 400) btn.classList.add('show'); else btn.classList.remove('show');
-    });
-
-    /* ===== NAV SCROLL EFFECT ===== */
-    window.addEventListener('scroll', function(){
-      const nav = document.getElementById('navbar');
-      if(window.scrollY > 30) nav.style.background = 'rgba(5,8,16,0.95)';
-      else nav.style.background = 'rgba(5,8,16,0.7)';
-    });
-
-    /* ===== HAMBURGER ===== */
-    function toggleNav(){
-      document.getElementById('navLinks').classList.toggle('open');
+  class P {
+    constructor(){ this.reset(); }
+    reset(){
+      this.x = Math.random()*W; this.y = Math.random()*H;
+      this.r = Math.random()*1.4+0.3;
+      this.vx = (Math.random()-.5)*.28; this.vy = (Math.random()-.5)*.28;
+      this.a = Math.random()*.45+0.08;
+      this.col = Math.random()>.5 ? '124,109,255' : '0,212,255';
     }
+    update(){
+      let dx=this.x-mouse.x, dy=this.y-mouse.y, d=Math.hypot(dx,dy);
+      if(d<130){ this.vx+=dx/d*.4; this.vy+=dy/d*.4; }
+      this.vx*=.985; this.vy*=.985;
+      this.x+=this.vx; this.y+=this.vy;
+      if(this.x<0||this.x>W||this.y<0||this.y>H) this.reset();
+    }
+    draw(){
+      x.beginPath(); x.arc(this.x,this.y,this.r,0,Math.PI*2);
+      x.fillStyle=`rgba(${this.col},${this.a})`; x.fill();
+    }
+  }
+  for(let i=0;i<130;i++) pts.push(new P());
 
-    /* ===== COUNTER ANIMATION ===== */
-    (function(){
-      function animateCount(el, target, suffix, duration){
-        let start=0, step=target/60;
-        function update(){
-          start+=step;
-          if(start>=target){ el.textContent=target+suffix; return; }
-          el.textContent=Math.floor(start)+suffix;
-          requestAnimationFrame(update);
+  function frame(){
+    x.clearRect(0,0,W,H);
+    pts.forEach(p=>{ p.update(); p.draw(); });
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        let d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);
+        if(d<110){
+          x.beginPath(); x.moveTo(pts[i].x,pts[i].y); x.lineTo(pts[j].x,pts[j].y);
+          x.strokeStyle=`rgba(124,109,255,${.1*(1-d/110)})`; x.lineWidth=.5; x.stroke();
         }
-        update();
       }
-      const obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){
-            // noop — metrics already set statically
-            obs.unobserve(e.target);
-          }
-        });
-      },{threshold:0.5});
-      document.querySelectorAll('.metric-val').forEach(function(el){ obs.observe(el); });
-    })();
-  </script>
+    }
+    requestAnimationFrame(frame);
+  }
+  frame();
+  document.addEventListener('mousemove',e=>{ mouse.x=e.clientX; mouse.y=e.clientY; });
+})();
+
+/* ===== 3D CARD TILT ===== */
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const mx=((e.clientX-r.left)/r.width)*100;
+    const my=((e.clientY-r.top)/r.height)*100;
+    card.style.setProperty('--mx',mx+'%');
+    card.style.setProperty('--my',my+'%');
+    const rx=(e.clientY-r.top-r.height/2)/r.height*10;
+    const ry=(e.clientX-r.left-r.width/2)/r.width*-10;
+    card.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='perspective(900px) rotateX(0) rotateY(0) translateY(0)';
+  });
+});
+
+/* ===== TYPED EFFECT ===== */
+(function(){
+  const el=document.getElementById('ttext');
+  const phrases=[
+    'Building Multi-Agent Agentic Systems.',
+    'Evaluating RAG Answer Faithfulness.',
+    'Shipping LLM Pipelines to Production.',
+    'Tracking Agent Trajectory & Tool Calls.',
+    'Deploying Adaptive RAG on AWS Bedrock.',
+  ];
+  let ti=0,ci=0,del=false;
+  function go(){
+    const s=phrases[ti];
+    if(!del){ el.textContent=s.slice(0,++ci); if(ci===s.length){del=true;setTimeout(go,2000);return;} }
+    else{ el.textContent=s.slice(0,--ci); if(ci===0){del=false;ti=(ti+1)%phrases.length;} }
+    setTimeout(go,del?38:65);
+  }
+  setTimeout(go,900);
+})();
+
+/* ===== SCROLL REVEAL ===== */
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);} });
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+})();
+
+/* ===== SCROLL EVENTS ===== */
+window.addEventListener('scroll',()=>{
+  const s=scrollY, h=document.body.scrollHeight-innerHeight;
+  document.getElementById('prog').style.width=(s/h*100)+'%';
+  const btn=document.getElementById('stop');
+  s>400?btn.classList.add('show'):btn.classList.remove('show');
+  const nav=document.getElementById('nav');
+  nav.style.background=s>40?'rgba(3,5,15,0.95)':'rgba(3,5,15,0.6)';
+});
+
+/* ===== HAMBURGER ===== */
+function toggleNav(){ document.getElementById('navLinks').classList.toggle('open'); }
+</script>
 </body>
 </html>
