@@ -3,44 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dinesh Sai Teja Paruchuri | AI Engineer · Agentic AI · RAG · GenAI</title>
-  <meta name="description" content="Portfolio of Dinesh Sai Teja Paruchuri — AI Engineer specialising in Agentic AI, RAG Evaluation, Generative AI and LLM systems at PwC India." />
-  <meta name="keywords" content="AI Engineer, Agentic AI, LangGraph, RAG Evaluation, Agentic Evaluation, LangChain, AWS Bedrock, LLM, PwC India, BITS Pilani, GenAI" />
-  <meta property="og:title" content="Dinesh Sai Teja Paruchuri | AI Engineer — Agentic AI & RAG" />
-  <meta property="og:description" content="AI Engineer specialising in Agentic AI, RAG & Evaluation at PwC India. Open to Senior AI/GenAI roles." />
+  <title>Dinesh Sai Teja Paruchuri | AI Engineer · Agentic AI · RAG Evaluation</title>
+  <meta name="description" content="Portfolio of Dinesh Sai Teja Paruchuri — AI Engineer at PwC India specialising in Agentic AI, Agentic Evaluation, RAG Evaluation and LLM systems." />
+  <meta name="keywords" content="AI Engineer, Agentic AI, Agentic Evaluation, RAG Evaluation, LangGraph, LangChain, OpenAI, LlamaIndex, AWS OpenSearch, LLM, PwC India, BITS Pilani, GenAI" />
+  <meta property="og:title" content="Dinesh Sai Teja Paruchuri | AI Engineer — Agentic & RAG Evaluation" />
+  <meta property="og:description" content="AI Engineer at PwC India. Expert in Agentic AI, Agentic Evaluation and RAG Evaluation. Available for Senior GenAI roles." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --bg:      #03050f;
-      --bg2:     #070b18;
-      --bg3:     #0c1228;
-      --glass:   rgba(255,255,255,0.035);
-      --glass2:  rgba(255,255,255,0.065);
-      --border:  rgba(255,255,255,0.07);
-      --border2: rgba(108,99,255,0.25);
-      --p:       #7c6dff;
-      --p2:      #9b8dff;
-      --cyan:    #00d4ff;
-      --pink:    #ff6b9d;
-      --gold:    #ffd166;
-      --green:   #06d6a0;
-      --grad:    linear-gradient(135deg,#7c6dff 0%,#00d4ff 100%);
-      --grad2:   linear-gradient(135deg,#ff6b9d,#7c6dff);
-      --grad3:   linear-gradient(135deg,#ffd166,#ff6b9d);
-      --text:    #ecedf8;
-      --text2:   #8f94b8;
-      --text3:   #4a5070;
-      --r:       18px;
-      --r2:      26px;
-      --glow:    0 8px 40px rgba(124,109,255,0.25);
-      --glow2:   0 0 60px rgba(124,109,255,0.4);
-      --ease:    all 0.38s cubic-bezier(0.4,0,0.2,1);
+      --bg:    #03050f; --bg2: #070b18; --bg3: #0c1228;
+      --glass: rgba(255,255,255,0.035); --glass2: rgba(255,255,255,0.065);
+      --border: rgba(255,255,255,0.07); --border2: rgba(124,109,255,0.25);
+      --p: #7c6dff; --p2: #9b8dff;
+      --cyan: #00d4ff; --pink: #ff6b9d; --gold: #ffd166; --green: #06d6a0;
+      --grad: linear-gradient(135deg,#7c6dff 0%,#00d4ff 100%);
+      --grad2: linear-gradient(135deg,#ff6b9d,#7c6dff);
+      --text: #ecedf8; --text2: #8f94b8; --text3: #4a5070;
+      --r: 18px; --r2: 26px;
+      --glow: 0 8px 40px rgba(124,109,255,0.25);
+      --ease: all 0.38s cubic-bezier(0.4,0,0.2,1);
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
@@ -50,117 +35,60 @@
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--p); border-radius: 3px; }
 
-    /* ===== CANVAS ===== */
     #bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-
-    /* ===== LAYOUT ===== */
     .wrap { max-width: 1140px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
 
-    /* ===== NAV ===== */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      height: 66px; padding: 0 36px;
-      display: flex; align-items: center; justify-content: space-between;
-      background: rgba(3,5,15,0.6); backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border); transition: var(--ease);
-    }
-    .nav-logo {
-      font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px;
-      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 0.84rem; font-weight: 500; color: var(--text2); transition: var(--ease); letter-spacing: 0.2px; }
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 999; height: 66px; padding: 0 36px; display: flex; align-items: center; justify-content: space-between; background: rgba(3,5,15,0.6); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); transition: var(--ease); }
+    .nav-logo { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-links { display: flex; gap: 34px; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.84rem; font-weight: 500; color: var(--text2); transition: var(--ease); }
     .nav-links a:hover { color: var(--cyan); }
-    .nav-resume {
-      padding: 7px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700;
-      border: 1px solid var(--border2); color: var(--p2) !important; -webkit-text-fill-color: var(--p2) !important;
-      background: rgba(124,109,255,0.08); transition: var(--ease);
-      display: inline-flex; align-items: center; gap: 6px;
-    }
+    .nav-resume { padding: 7px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; border: 1px solid var(--border2); color: var(--p2) !important; -webkit-text-fill-color: var(--p2) !important; background: rgba(124,109,255,0.08); transition: var(--ease); display: inline-flex; align-items: center; gap: 6px; }
+    .nav-resume svg { width: 13px; height: 13px; flex-shrink: 0; }
     .nav-resume:hover { background: rgba(124,109,255,0.18); border-color: var(--p); transform: translateY(-1px); }
-    .nav-cta {
-      padding: 8px 22px; border-radius: 50px; font-size: 0.82rem; font-weight: 700;
-      background: var(--grad); color: #fff !important; -webkit-text-fill-color: #fff !important;
-      box-shadow: 0 0 22px rgba(124,109,255,0.45); transition: var(--ease);
-    }
+    .nav-cta { padding: 8px 22px; border-radius: 50px; font-size: 0.82rem; font-weight: 700; background: var(--grad); color: #fff !important; -webkit-text-fill-color: #fff !important; box-shadow: 0 0 22px rgba(124,109,255,0.4); transition: var(--ease); }
     .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(124,109,255,0.65); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { width: 22px; height: 2px; background: var(--text2); border-radius: 2px; transition: var(--ease); display: block; }
+    .hamburger span { width: 22px; height: 2px; background: var(--text2); border-radius: 2px; display: block; transition: var(--ease); }
 
-    /* ===== READING PROGRESS ===== */
     .prog { position: fixed; top: 66px; left: 0; height: 2px; z-index: 998; background: var(--grad); width: 0; transition: width 0.1s linear; }
 
-    /* ===== SECTION COMMONS ===== */
+    /* SECTIONS */
     section { padding: 110px 0; position: relative; z-index: 1; }
-    .s-tag {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 0.72rem; font-weight: 800; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--p2); margin-bottom: 14px;
-    }
+    .s-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--p2); margin-bottom: 14px; }
     .s-tag::before { content: ''; width: 28px; height: 2px; background: var(--grad); border-radius: 1px; flex-shrink: 0; }
     .s-title { font-size: clamp(1.9rem,3.5vw,2.9rem); font-weight: 800; letter-spacing: -1.2px; margin-bottom: 14px; line-height: 1.1; }
     .s-sub { font-size: 0.97rem; color: var(--text2); max-width: 560px; line-height: 1.8; }
     .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-    /* ===== 3D CARD ===== */
-    .card {
-      background: var(--glass); border: 1px solid var(--border);
-      border-radius: var(--r2); padding: 32px;
-      backdrop-filter: blur(16px);
-      position: relative; overflow: hidden;
-      transition: border-color 0.38s ease, transform 0.12s ease, box-shadow 0.38s ease;
-      transform-style: preserve-3d;
-      will-change: transform;
-    }
-    .card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1.5px;
-      background: var(--grad); opacity: 0; transition: opacity 0.38s ease;
-    }
-    .card::after {
-      content: ''; position: absolute; inset: 0; border-radius: var(--r2);
-      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(124,109,255,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
+    /* CARD */
+    .card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--r2); padding: 32px; backdrop-filter: blur(16px); position: relative; overflow: hidden; transition: border-color 0.38s ease, box-shadow 0.38s ease; transform-style: preserve-3d; will-change: transform; }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1.5px; background: var(--grad); opacity: 0; transition: opacity 0.38s ease; }
+    .card::after { content: ''; position: absolute; inset: 0; border-radius: var(--r2); background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(124,109,255,0.06) 0%, transparent 70%); pointer-events: none; }
     .card:hover { border-color: rgba(124,109,255,0.35); box-shadow: var(--glow); }
     .card:hover::before { opacity: 1; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
 
-    /* Floating accent blobs behind sections */
-    .blob {
-      position: absolute; border-radius: 50%; filter: blur(100px);
-      pointer-events: none; z-index: 0;
-    }
-
-    /* ===== HERO ===== */
+    /* HERO */
     #hero { min-height: 100vh; display: flex; align-items: center; padding: 130px 0 90px; overflow: hidden; }
     .hero-wrap { display: flex; align-items: center; gap: 72px; width: 100%; }
     .hero-left { flex: 1; }
-
-    /* Greeting */
-    .hero-hello {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.5px;
-      color: var(--cyan); margin-bottom: 22px;
-      padding: 6px 18px; border-radius: 50px;
-      border: 1px solid rgba(0,212,255,0.25); background: rgba(0,212,255,0.06);
-    }
+    .hero-hello { display: inline-flex; align-items: center; gap: 10px; font-size: 0.82rem; font-weight: 700; color: var(--cyan); margin-bottom: 22px; padding: 6px 18px; border-radius: 50px; border: 1px solid rgba(0,212,255,0.25); background: rgba(0,212,255,0.06); }
     .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; flex-shrink: 0; }
-
     .hero-name { font-size: clamp(2.5rem,5.5vw,4.2rem); font-weight: 900; letter-spacing: -2.5px; line-height: 1.0; margin-bottom: 16px; }
     .hero-role { font-size: clamp(1rem,2vw,1.2rem); font-weight: 500; color: var(--text2); margin-bottom: 28px; line-height: 1.6; }
     .hero-role strong { color: var(--p2); font-weight: 700; }
 
-    /* Specialisms bar */
+    /* Spec chips */
     .hero-spec { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
-    .spec-chip {
-      padding: 7px 16px; border-radius: 50px; font-size: 0.78rem; font-weight: 700;
-      display: inline-flex; align-items: center; gap: 7px;
-    }
+    .spec-chip { padding: 7px 16px; border-radius: 50px; font-size: 0.78rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; }
+    .spec-chip svg { width: 13px; height: 13px; flex-shrink: 0; }
     .spec-chip.a { border: 1px solid rgba(124,109,255,0.4); background: rgba(124,109,255,0.1); color: var(--p2); }
     .spec-chip.b { border: 1px solid rgba(0,212,255,0.35); background: rgba(0,212,255,0.08); color: var(--cyan); }
     .spec-chip.c { border: 1px solid rgba(6,214,160,0.35); background: rgba(6,214,160,0.08); color: var(--green); }
     .spec-chip.d { border: 1px solid rgba(255,209,102,0.3); background: rgba(255,209,102,0.07); color: var(--gold); }
 
-    /* Typed */
     .hero-typed { font-size: 0.95rem; color: var(--text2); margin-bottom: 36px; min-height: 28px; line-height: 1.7; }
     #ttext { color: var(--cyan); font-weight: 600; }
     .tcursor { display: inline-block; width: 2px; height: 0.9em; background: var(--cyan); margin-left: 3px; border-radius: 1px; animation: blink 1s ease infinite; vertical-align: middle; }
@@ -169,221 +97,123 @@
     .hero-metrics { display: flex; gap: 28px; margin-bottom: 40px; flex-wrap: wrap; }
     .metric { display: flex; flex-direction: column; padding-left: 14px; border-left: 2px solid var(--p); }
     .m-val { font-size: 1.9rem; font-weight: 900; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; font-family: 'Space Mono', monospace; }
-    .m-lbl { font-size: 0.72rem; color: var(--text3); font-weight: 600; margin-top: 4px; letter-spacing: 0.3px; }
+    .m-lbl { font-size: 0.72rem; color: var(--text3); font-weight: 600; margin-top: 4px; }
 
-    /* CTA buttons */
+    /* Buttons */
     .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-glow {
-      padding: 14px 30px; border-radius: 50px; background: var(--grad);
-      color: #fff; font-weight: 700; font-size: 0.88rem;
-      display: inline-flex; align-items: center; gap: 9px;
-      box-shadow: 0 0 30px rgba(124,109,255,0.5); transition: var(--ease); border: none; cursor: pointer;
-    }
+    .btn-glow { padding: 14px 30px; border-radius: 50px; background: var(--grad); color: #fff; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 9px; box-shadow: 0 0 30px rgba(124,109,255,0.5); transition: var(--ease); border: none; cursor: pointer; }
     .btn-glow:hover { transform: translateY(-3px); box-shadow: 0 0 55px rgba(124,109,255,0.7); }
-    .btn-ghost {
-      padding: 13px 26px; border-radius: 50px;
-      border: 1px solid var(--border); background: var(--glass2);
-      color: var(--text); font-weight: 600; font-size: 0.88rem;
-      display: inline-flex; align-items: center; gap: 9px;
-      backdrop-filter: blur(10px); transition: var(--ease);
-    }
+    .btn-ghost { padding: 13px 26px; border-radius: 50px; border: 1px solid var(--border); background: var(--glass2); color: var(--text); font-weight: 600; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 9px; backdrop-filter: blur(10px); transition: var(--ease); }
     .btn-ghost:hover { border-color: var(--p); color: var(--p2); transform: translateY(-3px); box-shadow: var(--glow); }
-    .btn-resume {
-      padding: 13px 26px; border-radius: 50px;
-      border: 1px solid rgba(255,209,102,0.3); background: rgba(255,209,102,0.06);
-      color: var(--gold); font-weight: 700; font-size: 0.88rem;
-      display: inline-flex; align-items: center; gap: 9px;
-      transition: var(--ease);
-    }
+    .btn-resume { padding: 13px 26px; border-radius: 50px; border: 1px solid rgba(255,209,102,0.3); background: rgba(255,209,102,0.06); color: var(--gold); font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 9px; transition: var(--ease); }
+    .btn-resume svg { width: 16px; height: 16px; flex-shrink: 0; }
     .btn-resume:hover { border-color: var(--gold); background: rgba(255,209,102,0.12); transform: translateY(-3px); box-shadow: 0 0 30px rgba(255,209,102,0.2); }
 
     /* Photo */
     .hero-right { flex-shrink: 0; position: relative; width: 360px; height: 360px; }
-    .photo-glow { position: absolute; inset: -20px; border-radius: 50%; background: radial-gradient(circle, rgba(124,109,255,0.5) 0%, transparent 70%); animation: pls-glow 4s ease infinite; }
-    .photo-ring1 {
-      position: absolute; inset: -12px; border-radius: 50%;
-      border: 2px solid transparent;
-      background: var(--grad) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-      animation: spin 9s linear infinite;
-    }
+    .photo-glow { position: absolute; inset: -20px; border-radius: 50%; background: radial-gradient(circle,rgba(124,109,255,0.5) 0%,transparent 70%); animation: pls-glow 4s ease infinite; }
+    .photo-ring1 { position: absolute; inset: -12px; border-radius: 50%; border: 2px solid transparent; background: var(--grad) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin 9s linear infinite; }
     .photo-ring2 { position: absolute; inset: -26px; border-radius: 50%; border: 1px solid rgba(124,109,255,0.18); animation: spin 14s linear infinite reverse; }
     .photo-ring3 { position: absolute; inset: -42px; border-radius: 50%; border: 1px dashed rgba(0,212,255,0.1); animation: spin 20s linear infinite; }
-    .hero-img {
-      width: 100%; height: 100%; border-radius: 50%;
-      object-fit: cover; object-position: top center;
-      border: 5px solid var(--bg2); position: relative; z-index: 2;
-      box-shadow: 0 0 70px rgba(124,109,255,0.45);
-    }
-    /* Floating 3D badges around photo */
-    .float-badge {
-      position: absolute; z-index: 3; padding: 8px 14px; border-radius: 14px;
-      font-size: 0.72rem; font-weight: 700;
-      backdrop-filter: blur(12px); white-space: nowrap;
-      animation: float-badge 5s ease-in-out infinite;
-    }
-    .fb1 {
-      top: 10px; left: -50px;
-      background: rgba(124,109,255,0.25); border: 1px solid rgba(124,109,255,0.4);
-      color: var(--p2); animation-delay: 0s;
-      box-shadow: 0 4px 20px rgba(124,109,255,0.2);
-    }
-    .fb2 {
-      bottom: 50px; right: -60px;
-      background: rgba(0,212,255,0.15); border: 1px solid rgba(0,212,255,0.3);
-      color: var(--cyan); animation-delay: 1.5s;
-      box-shadow: 0 4px 20px rgba(0,212,255,0.15);
-    }
-    .fb3 {
-      bottom: -10px; left: -20px;
-      background: rgba(6,214,160,0.15); border: 1px solid rgba(6,214,160,0.3);
-      color: var(--green); animation-delay: 3s;
-      box-shadow: 0 4px 20px rgba(6,214,160,0.15);
-    }
+    .hero-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: top center; border: 5px solid var(--bg2); position: relative; z-index: 2; box-shadow: 0 0 70px rgba(124,109,255,0.45); }
 
-    /* ===== SKILLS ===== */
+    /* Floating badges */
+    .float-badge { position: absolute; z-index: 3; padding: 8px 14px; border-radius: 14px; font-size: 0.72rem; font-weight: 700; backdrop-filter: blur(12px); white-space: nowrap; display: flex; align-items: center; gap: 7px; animation: float-badge 5s ease-in-out infinite; }
+    .float-badge svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .fb1 { top: 10px; left: -55px; background: rgba(124,109,255,0.22); border: 1px solid rgba(124,109,255,0.4); color: var(--p2); animation-delay: 0s; box-shadow: 0 4px 20px rgba(124,109,255,0.18); }
+    .fb2 { bottom: 55px; right: -65px; background: rgba(0,212,255,0.14); border: 1px solid rgba(0,212,255,0.3); color: var(--cyan); animation-delay: 1.8s; box-shadow: 0 4px 20px rgba(0,212,255,0.14); }
+    .fb3 { bottom: -10px; left: -25px; background: rgba(6,214,160,0.14); border: 1px solid rgba(6,214,160,0.3); color: var(--green); animation-delay: 3.2s; box-shadow: 0 4px 20px rgba(6,214,160,0.14); }
+
+    /* SKILLS */
     #skills { background: var(--bg2); }
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 22px; margin-top: 56px; }
     .sk-head { font-size: 0.75rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--cyan); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .sk-icon { font-size: 1.15rem; }
+    .sk-head svg { width: 17px; height: 17px; flex-shrink: 0; }
     .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      padding: 6px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 600;
-      border: 1px solid var(--border); background: var(--glass); color: var(--text2);
-      transition: var(--ease); cursor: default;
-    }
+    .tag { padding: 6px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; border: 1px solid var(--border); background: var(--glass); color: var(--text2); transition: var(--ease); cursor: default; }
     .tag:hover { border-color: var(--p); color: var(--p2); background: rgba(124,109,255,0.1); transform: scale(1.05) translateY(-1px); }
-    .tag.hot { border-color: rgba(124,109,255,0.45); color: var(--p2); background: rgba(124,109,255,0.1); }
+    .tag.hot  { border-color: rgba(124,109,255,0.45); color: var(--p2); background: rgba(124,109,255,0.1); }
     .tag.hot2 { border-color: rgba(0,212,255,0.35); color: var(--cyan); background: rgba(0,212,255,0.07); }
     .tag.hot3 { border-color: rgba(6,214,160,0.35); color: var(--green); background: rgba(6,214,160,0.07); }
 
-    /* ===== EXPERIENCE ===== */
+    /* EXPERIENCE TIMELINE */
     .tl { position: relative; margin-top: 60px; }
-    .tl::before {
-      content: ''; position: absolute; left: 22px; top: 0; bottom: 0; width: 1.5px;
-      background: linear-gradient(to bottom, var(--p), rgba(124,109,255,0.1));
-    }
+    .tl::before { content: ''; position: absolute; left: 22px; top: 0; bottom: 0; width: 1.5px; background: linear-gradient(to bottom,var(--p),rgba(124,109,255,0.08)); }
     .tl-item { padding-left: 70px; margin-bottom: 44px; position: relative; }
-    .tl-dot {
-      position: absolute; left: 11px; top: 8px;
-      width: 24px; height: 24px; border-radius: 50%;
-      background: var(--grad); border: 3px solid var(--bg);
-      box-shadow: 0 0 18px rgba(124,109,255,0.65), 0 0 0 4px rgba(124,109,255,0.1);
-    }
-    .exp-now {
-      display: inline-flex; align-items: center; gap: 6px; margin-bottom: 14px;
-      padding: 4px 13px; border-radius: 50px; font-size: 0.72rem; font-weight: 700;
-      background: rgba(6,214,160,0.1); border: 1px solid rgba(6,214,160,0.3); color: var(--green);
-    }
-    .exp-now .ldot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; }
+    .tl-dot { position: absolute; left: 11px; top: 8px; width: 24px; height: 24px; border-radius: 50%; background: var(--grad); border: 3px solid var(--bg); box-shadow: 0 0 18px rgba(124,109,255,0.65), 0 0 0 4px rgba(124,109,255,0.1); }
+    .exp-now { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 14px; padding: 4px 13px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; background: rgba(6,214,160,0.1); border: 1px solid rgba(6,214,160,0.3); color: var(--green); }
+    .ldot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; }
     .exp-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
     .exp-title { font-size: 1.12rem; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
     .exp-co { font-size: 0.92rem; font-weight: 600; color: var(--p2); margin-top: 2px; }
-    .exp-date-pill {
-      font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text3);
-      padding: 4px 13px; border: 1px solid var(--border); border-radius: 50px;
-      white-space: nowrap; flex-shrink: 0; margin-top: 4px;
-    }
-    /* ===== FIXED BULLET ALIGNMENT ===== */
-    .bullets { list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
-    .bullets li {
-      display: grid;
-      grid-template-columns: 20px 1fr;
-      gap: 0;
-      align-items: start;
-      font-size: 0.9rem; color: var(--text2); line-height: 1.75;
-    }
-    .bullets li .bull {
-      color: var(--p2); font-size: 0.75rem; padding-top: 4px;
-      display: flex; align-items: flex-start; justify-content: center;
-    }
-    .bullets li .bull-text { flex: 1; }
+    .exp-date-pill { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text3); padding: 4px 13px; border: 1px solid var(--border); border-radius: 50px; white-space: nowrap; flex-shrink: 0; margin-top: 4px; }
+
+    /* PERFECTLY ALIGNED BULLETS */
+    .bullets { list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 13px; }
+    .bullets li { display: grid; grid-template-columns: 22px 1fr; align-items: start; font-size: 0.9rem; color: var(--text2); line-height: 1.78; }
+    .bull { display: flex; justify-content: center; padding-top: 5px; }
+    .bull svg { width: 11px; height: 11px; color: var(--p2); flex-shrink: 0; }
+    .bull-text { }
     .bullets li strong { color: var(--text); font-weight: 700; }
     .bullets li em { color: var(--cyan); font-style: normal; font-weight: 700; }
-    .bullets li .tag-inline {
-      display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;
-      background: rgba(124,109,255,0.12); color: var(--p2); border: 1px solid rgba(124,109,255,0.25);
-      margin: 0 2px; vertical-align: middle;
-    }
+    .tag-inline { display: inline-block; padding: 1px 9px; border-radius: 4px; font-size: 0.72rem; font-weight: 700; background: rgba(124,109,255,0.12); color: var(--p2); border: 1px solid rgba(124,109,255,0.25); margin: 0 2px; vertical-align: middle; }
 
-    /* ===== HIGHLIGHTS ===== */
+    /* HIGHLIGHTS */
     #highlights { background: var(--bg2); }
     .hl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 22px; margin-top: 56px; }
+    .hl-icon { display: flex; align-items: center; margin-bottom: 18px; }
+    .hl-icon svg { width: 34px; height: 34px; color: var(--p2); }
     .hl-num { font-family: 'Space Mono', monospace; font-size: 3.2rem; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px; }
     .hl-label { font-size: 0.88rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
     .hl-desc { font-size: 0.82rem; color: var(--text2); line-height: 1.75; }
-    .hl-icon { font-size: 1.6rem; margin-bottom: 14px; display: block; }
 
-    /* ===== EDUCATION ===== */
+    /* EDUCATION */
     .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 22px; margin-top: 56px; }
     .edu-deg { font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
     .edu-field { font-size: 0.84rem; color: var(--cyan); font-weight: 700; margin-bottom: 14px; }
     .edu-inst { font-size: 0.95rem; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .edu-inst svg { width: 17px; height: 17px; color: var(--p2); flex-shrink: 0; }
     .edu-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-    .edu-chip {
-      padding: 4px 14px; border-radius: 50px; font-size: 0.76rem; font-weight: 700;
-      background: var(--glass2); border: 1px solid var(--border); color: var(--text2);
-    }
+    .edu-chip { padding: 4px 14px; border-radius: 50px; font-size: 0.76rem; font-weight: 700; background: var(--glass2); border: 1px solid var(--border); color: var(--text2); }
     .edu-chip.gpa { border-color: rgba(124,109,255,0.4); color: var(--p2); background: rgba(124,109,255,0.1); }
-    .edu-chip.live { border-color: rgba(6,214,160,0.4); color: var(--green); background: rgba(6,214,160,0.08); animation: pulse-border 2.5s ease infinite; }
+    .edu-chip.live { border-color: rgba(6,214,160,0.4); color: var(--green); background: rgba(6,214,160,0.08); display: inline-flex; align-items: center; gap: 6px; animation: pulse-border 2.5s ease infinite; }
+    .edu-chip.live svg { width: 8px; height: 8px; }
 
-    /* ===== CONTACT ===== */
+    /* CONTACT */
     #contact { background: var(--bg2); }
     .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 60px; }
-    .avail-card {
-      padding: 26px; border-radius: var(--r2); margin-bottom: 24px;
-      background: linear-gradient(135deg, rgba(124,109,255,0.12), rgba(0,212,255,0.07));
-      border: 1px solid rgba(124,109,255,0.25);
-    }
+    .avail-card { padding: 26px; border-radius: var(--r2); margin-bottom: 24px; background: linear-gradient(135deg,rgba(124,109,255,0.12),rgba(0,212,255,0.07)); border: 1px solid rgba(124,109,255,0.25); }
     .avail-ttl { font-weight: 800; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
     .green-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); animation: pls 2s ease infinite; flex-shrink: 0; }
     .avail-body { font-size: 0.87rem; color: var(--text2); line-height: 1.8; }
     .ct-list { display: flex; flex-direction: column; gap: 14px; }
-    .ct-item {
-      display: flex; align-items: center; gap: 16px;
-      padding: 15px 20px; border-radius: var(--r);
-      border: 1px solid var(--border); background: var(--glass);
-      backdrop-filter: blur(10px); transition: var(--ease);
-    }
+    .ct-item { display: flex; align-items: center; gap: 16px; padding: 15px 20px; border-radius: var(--r); border: 1px solid var(--border); background: var(--glass); backdrop-filter: blur(10px); transition: var(--ease); }
     .ct-item:hover { border-color: var(--p); transform: translateX(5px); box-shadow: var(--glow); }
-    .ct-ico {
-      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
-      background: var(--grad); display: flex; align-items: center; justify-content: center;
-      font-size: 1.05rem; box-shadow: 0 0 18px rgba(124,109,255,0.4);
-    }
+    .ct-ico { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; background: var(--grad); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 18px rgba(124,109,255,0.4); }
+    .ct-ico svg { width: 20px; height: 20px; }
     .ct-lbl { font-size: 0.7rem; color: var(--text3); font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 2px; }
     .ct-val { font-size: 0.88rem; font-weight: 700; color: var(--text); }
     .soc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-    .soc-btn {
-      padding: 15px 20px; border-radius: var(--r);
-      border: 1px solid var(--border); background: var(--glass);
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      font-weight: 700; font-size: 0.84rem; color: var(--text2);
-      transition: var(--ease); backdrop-filter: blur(10px);
-    }
+    .soc-btn { padding: 15px 20px; border-radius: var(--r); border: 1px solid var(--border); background: var(--glass); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 0.84rem; color: var(--text2); transition: var(--ease); backdrop-filter: blur(10px); }
     .soc-btn:hover { border-color: var(--p); color: var(--p2); transform: translateY(-3px); box-shadow: var(--glow); }
     .soc-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
     .soc-btn.li:hover { border-color: #0a66c2; color: #5ba4e0; }
     .soc-btn.mail:hover { border-color: var(--gold); color: var(--gold); }
+    .resume-card { display: block; margin-bottom: 18px; text-align: center; padding: 26px 32px; border-radius: var(--r2); border: 1px solid rgba(255,209,102,0.25); background: rgba(255,209,102,0.05); transition: var(--ease); }
+    .resume-card:hover { border-color: var(--gold); background: rgba(255,209,102,0.1); transform: translateY(-3px); box-shadow: 0 0 30px rgba(255,209,102,0.15); }
+    .resume-card svg { width: 36px; height: 36px; color: var(--gold); margin-bottom: 10px; }
+    .resume-card-title { font-weight: 800; font-size: 1rem; color: var(--gold); margin-bottom: 4px; }
+    .resume-card-sub { font-size: 0.8rem; color: var(--text3); }
 
-    /* ===== FOOTER ===== */
+    /* FOOTER */
     footer { position: relative; z-index: 1; text-align: center; padding: 44px 24px; border-top: 1px solid var(--border); color: var(--text3); font-size: 0.82rem; }
     footer .hl { color: var(--p2); }
-
-    /* ===== SCROLL TOP ===== */
-    #stop {
-      position: fixed; bottom: 30px; right: 30px; z-index: 997;
-      width: 46px; height: 46px; border-radius: 50%;
-      background: var(--grad); border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-size: 1rem; opacity: 0; transform: translateY(20px);
-      transition: var(--ease); box-shadow: 0 0 22px rgba(124,109,255,0.5);
-    }
+    #stop { position: fixed; bottom: 30px; right: 30px; z-index: 997; width: 46px; height: 46px; border-radius: 50%; background: var(--grad); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1rem; opacity: 0; transform: translateY(20px); transition: var(--ease); box-shadow: 0 0 22px rgba(124,109,255,0.5); }
     #stop.show { opacity: 1; transform: translateY(0); }
     #stop:hover { transform: translateY(-4px); box-shadow: 0 0 36px rgba(124,109,255,0.7); }
+    #stop svg { width: 18px; height: 18px; }
 
-    /* ===== KEYFRAMES ===== */
+    /* ANIMATIONS */
     @keyframes pls { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.85)} }
     @keyframes pls-glow { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.08)} }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
@@ -392,45 +222,38 @@
     @keyframes pulse-border { 0%,100%{box-shadow:none} 50%{box-shadow:0 0 14px rgba(6,214,160,0.3)} }
     @keyframes fadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
 
-    /* Initial reveal */
-    .fu { opacity:0; animation: fadeUp 0.75s ease forwards; }
-    .d1{animation-delay:0.05s} .d2{animation-delay:0.15s} .d3{animation-delay:0.25s}
-    .d4{animation-delay:0.35s} .d5{animation-delay:0.5s} .d6{animation-delay:0.65s}
+    .fu{opacity:0;animation:fadeUp 0.75s ease forwards}
+    .d1{animation-delay:0.05s}.d2{animation-delay:0.15s}.d3{animation-delay:0.25s}
+    .d4{animation-delay:0.35s}.d5{animation-delay:0.5s}.d6{animation-delay:0.65s}
+    .rev{opacity:0;transform:translateY(36px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .rev.vis{opacity:1;transform:none}
 
-    /* Scroll reveal */
-    .rev { opacity:0; transform:translateY(36px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .rev.vis { opacity:1; transform:none; }
-
-    /* ===== RESPONSIVE ===== */
+    /* RESPONSIVE */
     @media(max-width:920px){
-      .hero-wrap { flex-direction: column-reverse; gap: 52px; text-align: center; }
-      .hero-right { width: 260px; height: 260px; }
-      .fb1,.fb2,.fb3 { display: none; }
-      .hero-ctas { justify-content: center; }
-      .hero-metrics { justify-content: center; }
-      .hero-spec { justify-content: center; }
-      .hero-typed { text-align: center; }
-      nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 66px; left: 0; right: 0; background: rgba(7,11,24,0.97); padding: 28px; gap: 22px; border-bottom: 1px solid var(--border); backdrop-filter: blur(24px); }
-      .hamburger { display: flex; }
-      .ct-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-wrap{flex-direction:column-reverse;gap:52px;text-align:center}
+      .hero-right{width:260px;height:260px}
+      .fb1,.fb2,.fb3{display:none}
+      .hero-ctas,.hero-metrics,.hero-spec,.hero-typed{justify-content:center;text-align:center}
+      nav{padding:0 20px}
+      .nav-links{display:none}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:rgba(7,11,24,0.97);padding:28px;gap:22px;border-bottom:1px solid var(--border);backdrop-filter:blur(24px)}
+      .hamburger{display:flex}
+      .ct-grid{grid-template-columns:1fr;gap:40px}
     }
     @media(max-width:620px){
-      .hero-name { letter-spacing: -1.5px; }
-      .soc-grid { grid-template-columns: 1fr; }
-      .tl::before { left: 14px; }
-      .tl-item { padding-left: 50px; }
-      .tl-dot { left: 3px; width: 20px; height: 20px; }
+      .hero-name{letter-spacing:-1.5px}
+      .soc-grid{grid-template-columns:1fr}
+      .tl::before{left:14px}
+      .tl-item{padding-left:50px}
+      .tl-dot{left:3px;width:20px;height:20px}
     }
   </style>
 </head>
 <body>
-
 <div class="prog" id="prog"></div>
 <canvas id="bg-canvas"></canvas>
 
-<!-- ===== NAV ===== -->
+<!-- NAV -->
 <nav id="nav">
   <div class="nav-logo">Dinesh</div>
   <ul class="nav-links" id="navLinks">
@@ -441,7 +264,8 @@
     <li><a href="#education">Education</a></li>
     <li>
       <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="nav-resume">
-        ↓ Resume
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+        Resume
       </a>
     </li>
     <li><a href="#contact" class="nav-cta">Hire Me</a></li>
@@ -451,167 +275,190 @@
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section id="hero">
   <div class="wrap">
     <div class="hero-wrap">
-      <!-- LEFT -->
       <div class="hero-left">
-        <div class="hero-hello fu d1">
-          <span class="pulse-dot"></span>
-          Open to Senior AI / GenAI Roles
-        </div>
+        <div class="hero-hello fu d1"><span class="pulse-dot"></span>Open to Senior AI / GenAI Roles</div>
+        <h1 class="hero-name fu d2"><span class="grad-text">Dinesh Sai Teja</span><br>Paruchuri</h1>
+        <p class="hero-role fu d3"><strong>AI Engineer</strong> at PwC India &nbsp;·&nbsp; <strong>3+ Years</strong> Building Production AI</p>
 
-        <h1 class="hero-name fu d2">
-          <span class="grad-text">Dinesh Sai Teja</span><br>Paruchuri
-        </h1>
-
-        <p class="hero-role fu d3">
-          <strong>AI Engineer</strong> at PwC India &nbsp;·&nbsp; <strong>3+ Years</strong> Building Production AI
-        </p>
-
-        <!-- Specialism chips -->
         <div class="hero-spec fu d3">
-          <span class="spec-chip a">⚡ Agentic AI</span>
-          <span class="spec-chip b">🔍 RAG Pipelines</span>
-          <span class="spec-chip c">📊 Agentic Evaluation</span>
-          <span class="spec-chip d">🧪 RAG Evaluation</span>
+          <!-- Agentic AI -->
+          <span class="spec-chip a">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Agentic AI
+          </span>
+          <!-- RAG Pipelines -->
+          <span class="spec-chip b">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            RAG Pipelines
+          </span>
+          <!-- Agentic Evaluation -->
+          <span class="spec-chip c">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+            Agentic Evaluation
+          </span>
+          <!-- RAG Evaluation -->
+          <span class="spec-chip d">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            RAG Evaluation
+          </span>
         </div>
 
-        <p class="hero-typed fu d4">
-          Currently: <span id="ttext"></span><span class="tcursor"></span>
-        </p>
+        <p class="hero-typed fu d4">Currently: <span id="ttext"></span><span class="tcursor"></span></p>
 
-        <!-- Metrics -->
         <div class="hero-metrics fu d4">
-          <div class="metric">
-            <span class="m-val">87%</span>
-            <span class="m-lbl">Chatbot Accuracy</span>
-          </div>
-          <div class="metric">
-            <span class="m-val">75%</span>
-            <span class="m-lbl">RAG Retrieval</span>
-          </div>
-          <div class="metric">
-            <span class="m-val">55+</span>
-            <span class="m-lbl">Countries Served</span>
-          </div>
-          <div class="metric">
-            <span class="m-val">&lt;10s</span>
-            <span class="m-lbl">Query Latency</span>
-          </div>
+          <div class="metric"><span class="m-val">87%</span><span class="m-lbl">Chatbot Accuracy</span></div>
+          <div class="metric"><span class="m-val">75%</span><span class="m-lbl">RAG Retrieval</span></div>
+          <div class="metric"><span class="m-val">55+</span><span class="m-lbl">Countries Served</span></div>
+          <div class="metric"><span class="m-val">&lt;10s</span><span class="m-lbl">Query Latency</span></div>
         </div>
 
-        <!-- CTAs -->
         <div class="hero-ctas fu d5">
           <a href="#contact" class="btn-glow">✦ Let's Connect</a>
           <a href="#experience" class="btn-ghost">Experience →</a>
-          <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="btn-resume">↓ Resume</a>
+          <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="btn-resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+            Resume
+          </a>
         </div>
       </div>
 
-      <!-- RIGHT: Photo -->
+      <!-- Photo with floating badges -->
       <div class="hero-right fu d2">
         <div class="photo-glow"></div>
         <div class="photo-ring3"></div>
         <div class="photo-ring2"></div>
         <div class="photo-ring1"></div>
         <img src="photo.jpeg" alt="Dinesh Sai Teja Paruchuri — AI Engineer, PwC India" class="hero-img" />
-        <!-- Floating badges -->
-        <div class="float-badge fb1">⚡ LangGraph Multi-Agent</div>
-        <div class="float-badge fb2">🔍 Hybrid RAG · RRF</div>
-        <div class="float-badge fb3">📊 MLflow Evaluation</div>
+        <!-- Floating badges with SVG icons -->
+        <div class="float-badge fb1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          LangGraph Multi-Agent
+        </div>
+        <div class="float-badge fb2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          Hybrid RAG · RRF
+        </div>
+        <div class="float-badge fb3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Agentic Evaluation
+        </div>
       </div>
     </div>
   </div>
-  <!-- Background blobs -->
-  <div class="blob" style="width:500px;height:500px;background:rgba(124,109,255,0.12);top:-100px;right:-100px;"></div>
-  <div class="blob" style="width:300px;height:300px;background:rgba(0,212,255,0.08);bottom:-50px;left:-80px;"></div>
+  <div class="blob" style="width:500px;height:500px;background:rgba(124,109,255,0.11);top:-100px;right:-100px;"></div>
+  <div class="blob" style="width:300px;height:300px;background:rgba(0,212,255,0.07);bottom:-50px;left:-80px;"></div>
 </section>
 
-<!-- ===== SKILLS ===== -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
     <div class="rev">
       <div class="s-tag">Technical Arsenal</div>
       <h2 class="s-title">Skills &amp; <span class="grad-text">Technologies</span></h2>
-      <p class="s-sub">Production-grade AI/ML stack with deep focus on Agentic systems, RAG evaluation and enterprise LLM deployment.</p>
+      <p class="s-sub">Production-grade AI/ML stack with deep focus on Agentic Evaluation, RAG Evaluation and enterprise LLM deployment.</p>
     </div>
     <div class="skills-grid">
+
+      <!-- Agentic & LLM -->
       <div class="card rev">
-        <div class="sk-head"><span class="sk-icon">🤖</span> Agentic &amp; LLM</div>
+        <div class="sk-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Agentic &amp; LLM
+        </div>
         <div class="tags">
           <span class="tag hot">LangGraph</span>
           <span class="tag hot">Agentic AI</span>
-          <span class="tag hot">Agentic Evaluation</span>
           <span class="tag hot">Multi-Agent Systems</span>
+          <span class="tag hot">Supervisor-Worker Pattern</span>
           <span class="tag hot">LangChain</span>
           <span class="tag hot">LlamaIndex</span>
           <span class="tag">Function Calling</span>
           <span class="tag">Prompt Engineering</span>
           <span class="tag">Chain-of-Thought</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">GPT-4 / GPT-4o</span>
         </div>
       </div>
+
+      <!-- RAG & Evaluation -->
       <div class="card rev">
-        <div class="sk-head"><span class="sk-icon">🔍</span> RAG &amp; Evaluation</div>
+        <div class="sk-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          RAG &amp; Evaluation
+        </div>
         <div class="tags">
           <span class="tag hot2">RAG Pipelines</span>
           <span class="tag hot2">RAG Evaluation</span>
+          <span class="tag hot2">Agentic Evaluation</span>
           <span class="tag hot2">Hybrid Search</span>
           <span class="tag hot2">Adaptive RAG</span>
           <span class="tag hot2">RRF (Rank Fusion)</span>
-          <span class="tag hot2">RAGAS Framework</span>
-          <span class="tag">MLflow + LLM Evals</span>
           <span class="tag">Answer Faithfulness</span>
           <span class="tag">Agent Trajectory</span>
+          <span class="tag">Tool Call Accuracy</span>
+          <span class="tag">Context Precision</span>
         </div>
       </div>
+
+      <!-- Cloud & Infra -->
       <div class="card rev">
-        <div class="sk-head"><span class="sk-icon">☁️</span> Cloud &amp; Infra</div>
+        <div class="sk-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          Cloud &amp; Infra
+        </div>
         <div class="tags">
-          <span class="tag hot">AWS Bedrock</span>
           <span class="tag hot">AWS OpenSearch</span>
-          <span class="tag">AWS Lambda</span>
+          <span class="tag hot">AWS Lambda</span>
           <span class="tag">AWS S3</span>
           <span class="tag">AWS ECS</span>
           <span class="tag">Microsoft Azure</span>
           <span class="tag">ArgoCD</span>
           <span class="tag">ServiceNow</span>
+          <span class="tag">Vector Databases</span>
         </div>
       </div>
+
+      <!-- Engineering & Dev -->
       <div class="card rev">
-        <div class="sk-head"><span class="sk-icon">⚙️</span> Engineering &amp; Dev</div>
+        <div class="sk-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Engineering &amp; Dev
+        </div>
         <div class="tags">
           <span class="tag hot3">Python</span>
-          <span class="tag">MLflow</span>
           <span class="tag">Flask</span>
           <span class="tag">Streamlit</span>
           <span class="tag">PostgreSQL</span>
           <span class="tag">REST APIs</span>
           <span class="tag">Git</span>
-          <span class="tag">Vector Databases</span>
           <span class="tag">CI/CD Pipelines</span>
+          <span class="tag">LLM Evaluation Metrics</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== EXPERIENCE ===== -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
     <div class="rev">
       <div class="s-tag">Career Journey</div>
       <h2 class="s-title">Work <span class="grad-text">Experience</span></h2>
-      <p class="s-sub">Delivering measurable GenAI impact at enterprise scale — from agentic pipelines to production RAG evaluation.</p>
+      <p class="s-sub">Enterprise GenAI delivery at PwC India — Agentic AI, Agentic Evaluation, RAG Evaluation and production LLM systems.</p>
     </div>
-
     <div class="tl">
-      <!-- Role 1: Current -->
+
+      <!-- Current Role -->
       <div class="tl-item rev">
         <div class="tl-dot"></div>
         <div class="card">
-          <div class="exp-now"><span class="ldot"></span> Currently Here · Full-Time</div>
+          <div class="exp-now"><span class="ldot"></span>Currently Here · Full-Time</div>
           <div class="exp-row">
             <div>
               <div class="exp-title">AI Engineer — Generative AI, RAG &amp; Agentic AI</div>
@@ -621,42 +468,34 @@
           </div>
           <ul class="bullets">
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Architected a production <strong>LangGraph Supervisor-Worker multi-agent chatbot</strong> for a global pharma client — orchestrating specialised sub-agents for complex regulatory queries with <span class="tag-inline">Agentic AI</span></span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Architected a <strong>LangGraph Supervisor-Worker multi-agent chatbot</strong> for a global pharma client — orchestrating specialised sub-agents for complex regulatory query resolution</span>
             </li>
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Built end-to-end <strong>Agentic Evaluation framework</strong> using MLflow, tracking <em>6 mission-critical metrics</em>: Agent Trajectory, Tool Call Accuracy, RAG Answer Faithfulness, Context Precision, Response Relevance &amp; Hallucination Rate</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Deployed <strong>Adaptive RAG</strong> with <em>Hybrid Search + Reciprocal Rank Fusion (RRF)</em> on AWS OpenSearch — achieving <em>sub-10s query latency</em> and <em>75% retrieval accuracy</em> in production</span>
             </li>
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Deployed <strong>Adaptive RAG</strong> with <em>Hybrid Search + Reciprocal Rank Fusion (RRF)</em> on AWS OpenSearch achieving <em>sub-10s end-to-end latency</em> and <em>75% retrieval accuracy</em> in production</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Built <strong>Global E&amp;C Regulatory Navigator</strong> covering <em>55+ countries</em> using Chain-of-Thought (CoT) prompting with OpenAI models — structured multi-step regulatory reasoning</span>
             </li>
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Implemented comprehensive <strong>RAG Evaluation</strong> pipeline with RAGAS — benchmarking Answer Faithfulness, Context Recall and Groundedness across diverse enterprise corpora</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Designed <strong>T&amp;E Knowledge Chatbot</strong> on AWS Lambda + OpenSearch — achieved <em>87% answer accuracy</em> serving enterprise-scale travel &amp; expense queries</span>
             </li>
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Built <strong>Global E&amp;C Regulatory Navigator</strong> covering <em>55+ countries</em> using Chain-of-Thought (CoT) prompting on <span class="tag-inline">AWS Bedrock</span> with structured multi-step reasoning</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Built <strong>Agentic Evaluation</strong> &amp; <strong>RAG Evaluation</strong> framework tracking <em>6 mission-critical metrics</em> — RAG Answer Faithfulness, Agent Trajectory, Tool Call Accuracy and more</span>
             </li>
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Designed <strong>T&amp;E Knowledge Chatbot</strong> on AWS Lambda + OpenSearch serverless — achieved <em>87% answer accuracy</em> serving enterprise travel &amp; expense queries at scale</span>
-            </li>
-            <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Integrated <strong>ServiceNow (SNOW)</strong> APIs within agentic pipelines for automated ticket creation, routing and resolution — reducing manual intervention by significant margins</span>
-            </li>
-            <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Managed <strong>CI/CD pipelines</strong> for LLM applications using ArgoCD on AWS ECS — ensuring reproducible, zero-downtime production deployments across multiple client environments</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Integrated <strong>ServiceNow (SNOW)</strong> within agentic pipelines for automated ticket creation, routing and resolution</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Role 2: Intern -->
+      <!-- Intern Role -->
       <div class="tl-item rev">
         <div class="tl-dot"></div>
         <div class="card">
@@ -669,172 +508,194 @@
           </div>
           <ul class="bullets">
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Developed POC for <strong>Function Calling</strong> using <em>GPT-3 &amp; GPT-3.5</em> — early-stage research into structured LLM outputs and tool-use patterns that laid the foundation for later agentic systems</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Developed POC for <strong>Function Calling</strong> using <em>GPT-3 &amp; GPT-3.5</em> — early-stage exploration of structured LLM outputs and tool-use patterns</span>
             </li>
             <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Contributed to backend <strong>RAG pipelines</strong> handling both unstructured (PDFs, docs) and structured (SQL, JSON) data — building chunking, embedding and retrieval components from scratch</span>
-            </li>
-            <li>
-              <span class="bull">▸</span>
-              <span class="bull-text">Explored <strong>vector similarity search</strong> strategies and embedding model comparisons to optimise retrieval quality for enterprise knowledge bases</span>
+              <span class="bull"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg></span>
+              <span class="bull-text">Contributed to backend <strong>RAG pipelines</strong> with both unstructured and structured data ingestion and retrieval</span>
             </li>
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== HIGHLIGHTS ===== -->
+<!-- HIGHLIGHTS -->
 <section id="highlights">
   <div class="wrap">
     <div class="rev">
       <div class="s-tag">Proven Impact</div>
       <h2 class="s-title">Key <span class="grad-text">Achievements</span></h2>
-      <p class="s-sub">Real, verified production metrics — zero fabrication. Every number is from live enterprise deployments.</p>
+      <p class="s-sub">Real, verified production metrics from live enterprise deployments — zero fabrication.</p>
     </div>
     <div class="hl-grid">
+
       <div class="card rev">
-        <span class="hl-icon">⚡</span>
+        <div class="hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="m13 2-2 6.5h5L8 22l2-6.5H5L13 2Z"/></svg>
+        </div>
         <div class="hl-num">&lt;10s</div>
         <div class="hl-label">End-to-End Query Latency</div>
-        <div class="hl-desc">Sub-10s RAG response time in production via Hybrid Search + RRF on AWS OpenSearch — optimised chunking &amp; caching strategy.</div>
+        <div class="hl-desc">Sub-10s RAG response time in production via Adaptive RAG with Hybrid Search + RRF on AWS OpenSearch.</div>
       </div>
+
       <div class="card rev">
-        <span class="hl-icon">🎯</span>
+        <div class="hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
         <div class="hl-num">75%</div>
         <div class="hl-label">RAG Retrieval Accuracy</div>
-        <div class="hl-desc">Achieved via Adaptive RAG with Hybrid (BM25 + Semantic) Search and Reciprocal Rank Fusion — benchmarked on pharma regulatory data.</div>
+        <div class="hl-desc">Measured via RAG Evaluation — Hybrid (BM25 + Semantic) Search with Reciprocal Rank Fusion on pharma regulatory corpora.</div>
       </div>
+
       <div class="card rev">
-        <span class="hl-icon">🤖</span>
+        <div class="hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 11V5"/><circle cx="12" cy="4" r="1" fill="currentColor"/><line x1="8" y1="15" x2="8" y2="15" stroke-width="2.5"/><line x1="16" y1="15" x2="16" y2="15" stroke-width="2.5"/></svg>
+        </div>
         <div class="hl-num">87%</div>
         <div class="hl-label">Agentic Chatbot Accuracy</div>
-        <div class="hl-desc">T&amp;E Knowledge Chatbot on AWS Lambda + OpenSearch — measured via RAG Evaluation with Answer Faithfulness &amp; Relevance scoring.</div>
+        <div class="hl-desc">T&amp;E Knowledge Chatbot on AWS Lambda + OpenSearch — validated using RAG Evaluation: Answer Faithfulness &amp; Relevance metrics.</div>
       </div>
+
       <div class="card rev">
-        <span class="hl-icon">🌍</span>
+        <div class="hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
         <div class="hl-num">55+</div>
         <div class="hl-label">Countries Covered</div>
-        <div class="hl-desc">E&amp;C Regulatory Navigator built with CoT prompting on AWS Bedrock — covering global compliance jurisdictions for a Big-4 client.</div>
+        <div class="hl-desc">Global E&amp;C Regulatory Navigator using Chain-of-Thought prompting with OpenAI models — covering compliance for a Big-4 client globally.</div>
       </div>
+
       <div class="card rev">
-        <span class="hl-icon">📊</span>
+        <div class="hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+        </div>
         <div class="hl-num">6</div>
         <div class="hl-label">Evaluation Metrics Tracked</div>
-        <div class="hl-desc">MLflow-integrated LLM &amp; Agentic Evaluation framework: Agent Trajectory, Tool Call Accuracy, Faithfulness, Context Precision, Relevance, Hallucination Rate.</div>
+        <div class="hl-desc">Agentic Evaluation &amp; RAG Evaluation framework: Agent Trajectory, Tool Call Accuracy, RAG Answer Faithfulness, Context Precision, Relevance, Hallucination Rate.</div>
       </div>
+
       <div class="card rev">
-        <span class="hl-icon">🏢</span>
+        <div class="hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+        </div>
         <div class="hl-num">3+</div>
         <div class="hl-label">Years Building Production AI</div>
-        <div class="hl-desc">Full-stack AI delivery at PwC India — from POC to production deployment — serving global pharma, finance and consulting clients.</div>
+        <div class="hl-desc">End-to-end AI delivery at PwC India — POC to production — across pharma, finance and consulting global clients.</div>
       </div>
+
     </div>
   </div>
-  <div class="blob" style="width:400px;height:400px;background:rgba(0,212,255,0.06);top:-80px;left:-100px;"></div>
+  <div class="blob" style="width:400px;height:400px;background:rgba(0,212,255,0.05);top:-80px;left:-100px;"></div>
 </section>
 
-<!-- ===== EDUCATION ===== -->
+<!-- EDUCATION -->
 <section id="education">
   <div class="wrap">
     <div class="rev">
       <div class="s-tag">Academic Foundation</div>
       <h2 class="s-title">Education</h2>
-      <p class="s-sub">Strong academic base bridging signal processing, software engineering and artificial intelligence.</p>
+      <p class="s-sub">Strong academic base bridging electronics, software engineering and artificial intelligence.</p>
     </div>
     <div class="edu-grid">
+
       <div class="card rev">
         <div class="edu-deg">M.Tech</div>
         <div class="edu-field">Artificial Intelligence &amp; Machine Learning (WILP)</div>
-        <div class="edu-inst">🏛️ BITS Pilani</div>
+        <div class="edu-inst">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 21h18"/><path d="M9 21V12l3-3 3 3v9"/><path d="M3 21V10l9-7 9 7v11"/></svg>
+          BITS Pilani
+        </div>
         <div class="edu-chips">
           <span class="edu-chip gpa">CGPA: 8.235 / 10</span>
-          <span class="edu-chip live">🟢 Ongoing</span>
+          <span class="edu-chip live">
+            <svg viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+            Ongoing
+          </span>
           <span class="edu-chip">2025 – 2027</span>
         </div>
       </div>
+
       <div class="card rev">
         <div class="edu-deg">B.Tech</div>
         <div class="edu-field">Electronics &amp; Communication Engineering</div>
-        <div class="edu-inst">🏛️ VIT, Andhra Pradesh</div>
+        <div class="edu-inst">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 21h18"/><path d="M9 21V12l3-3 3 3v9"/><path d="M3 21V10l9-7 9 7v11"/></svg>
+          VIT, Andhra Pradesh
+        </div>
         <div class="edu-chips">
           <span class="edu-chip gpa">CGPA: 9.54 / 10</span>
           <span class="edu-chip">Class of 2023</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
     <div class="rev">
       <div class="s-tag">Get In Touch</div>
       <h2 class="s-title">Let's Build Something<br><span class="grad-text">Remarkable Together</span></h2>
-      <p class="s-sub">Looking for senior AI Engineering roles — Agentic AI, RAG systems, LLM Evaluation. Remote or Bengaluru.</p>
+      <p class="s-sub">Open to Senior AI Engineering roles focused on Agentic AI, RAG Evaluation and LLM systems. Remote or Bengaluru.</p>
     </div>
     <div class="ct-grid">
+
       <div>
         <div class="avail-card rev">
-          <div class="avail-ttl"><span class="green-dot"></span> Open to Opportunities</div>
+          <div class="avail-ttl"><span class="green-dot"></span>Open to Opportunities</div>
           <div class="avail-body">
-            Actively exploring roles in <strong>Agentic AI, GenAI Engineering &amp; LLM Systems</strong>.<br>
-            Target CTC: <strong>16–18 LPA</strong>&nbsp;·&nbsp; Preferred: <strong>Remote or Bengaluru</strong><br>
+            Actively exploring roles in <strong>Agentic AI, GenAI Engineering &amp; RAG Evaluation</strong>.<br>
+            Target CTC: <strong>16–18 LPA</strong> &nbsp;·&nbsp; Preferred: <strong>Remote or Bengaluru</strong><br>
             Notice Period: <strong>Immediate to 30 days</strong>
           </div>
         </div>
         <div class="ct-list">
           <a href="mailto:dineshsaiteja.p@gmail.com" class="ct-item rev">
-            <div class="ct-ico">📧</div>
-            <div>
-              <div class="ct-lbl">Email</div>
-              <div class="ct-val">dineshsaiteja.p@gmail.com</div>
+            <div class="ct-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
+            <div><div class="ct-lbl">Email</div><div class="ct-val">dineshsaiteja.p@gmail.com</div></div>
           </a>
           <a href="tel:+919100364091" class="ct-item rev">
-            <div class="ct-ico">📱</div>
-            <div>
-              <div class="ct-lbl">Phone</div>
-              <div class="ct-val">+91-9100364091</div>
+            <div class="ct-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.08 4.18a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
             </div>
+            <div><div class="ct-lbl">Phone</div><div class="ct-val">+91-9100364091</div></div>
           </a>
           <div class="ct-item rev">
-            <div class="ct-ico">📍</div>
-            <div>
-              <div class="ct-lbl">Location</div>
-              <div class="ct-val">Bengaluru, Karnataka, India</div>
+            <div class="ct-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
+            <div><div class="ct-lbl">Location</div><div class="ct-val">Bengaluru, Karnataka, India</div></div>
           </div>
         </div>
       </div>
 
       <div>
         <div class="soc-grid rev">
-          <!-- LinkedIn with proper SVG icon -->
+          <!-- LinkedIn SVG -->
           <a href="https://linkedin.com/in/dineshsaitejap" target="_blank" rel="noopener" class="soc-btn li">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
-          <!-- Gmail icon -->
+          <!-- Email SVG -->
           <a href="mailto:dineshsaiteja.p@gmail.com" class="soc-btn mail">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             Email Me
           </a>
         </div>
 
-        <!-- Resume download card -->
-        <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="card rev" style="display:block; margin-bottom:18px; text-align:center; border-color:rgba(255,209,102,0.25); background:rgba(255,209,102,0.05);">
-          <div style="font-size:2rem; margin-bottom:10px;">📄</div>
-          <div style="font-weight:800; font-size:1rem; color:var(--gold); margin-bottom:6px;">View / Download Resume</div>
-          <div style="font-size:0.8rem; color:var(--text3);">Full CV · Google Drive · Always up to date</div>
+        <!-- Resume card with SVG icon -->
+        <a href="https://drive.google.com/file/d/13c5EZWYv6eDSb40zzviMdJy6JTKfr-qA/view?usp=sharing" target="_blank" rel="noopener" class="resume-card rev card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+          <div class="resume-card-title">View / Download Resume</div>
+          <div class="resume-card-sub">Full CV · Google Drive · Always up to date</div>
         </a>
 
         <div class="card rev" style="padding:24px;">
@@ -844,134 +705,98 @@
             <span class="tag hot">Multi-Agent LangGraph</span>
             <span class="tag hot2">RAG Evaluation</span>
             <span class="tag hot2">Agentic Evaluation</span>
-            <span class="tag hot3">AWS Bedrock</span>
-            <span class="tag">MLflow LLM Evals</span>
+            <span class="tag hot2">Hybrid Search · RRF</span>
+            <span class="tag">OpenAI GPT-4</span>
             <span class="tag">Prompt Engineering</span>
           </div>
         </div>
       </div>
+
     </div>
   </div>
-  <div class="blob" style="width:450px;height:450px;background:rgba(124,109,255,0.07);bottom:-100px;right:-80px;"></div>
+  <div class="blob" style="width:450px;height:450px;background:rgba(124,109,255,0.06);bottom:-100px;right:-80px;"></div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
   <p>Crafted with ❤️ by <span class="hl">Dinesh Sai Teja Paruchuri</span> &nbsp;·&nbsp; AI Engineer @ PwC India &nbsp;·&nbsp; Bengaluru</p>
-  <p style="margin-top:8px;">© 2025 &nbsp;·&nbsp; Built with pure HTML, CSS &amp; JS &nbsp;·&nbsp; <a href="https://linkedin.com/in/dineshsaitejap" style="color:var(--p2);">linkedin.com/in/dineshsaitejap</a></p>
+  <p style="margin-top:8px;">© 2025 &nbsp;·&nbsp; Pure HTML, CSS &amp; JS &nbsp;·&nbsp; <a href="https://linkedin.com/in/dineshsaitejap" style="color:var(--p2);">linkedin.com/in/dineshsaitejap</a></p>
 </footer>
 
-<!-- Scroll top -->
-<button id="stop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<button id="stop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
 
 <script>
-/* ===== PARTICLE CANVAS ===== */
+/* PARTICLE CANVAS */
 (function(){
-  const c = document.getElementById('bg-canvas');
-  const x = c.getContext('2d');
-  let W, H, pts = [], mouse = {x:-2000,y:-2000};
-
-  function resize(){ W = c.width = innerWidth; H = c.height = innerHeight; }
-  resize(); addEventListener('resize', resize);
-
-  class P {
-    constructor(){ this.reset(); }
-    reset(){
-      this.x = Math.random()*W; this.y = Math.random()*H;
-      this.r = Math.random()*1.4+0.3;
-      this.vx = (Math.random()-.5)*.28; this.vy = (Math.random()-.5)*.28;
-      this.a = Math.random()*.45+0.08;
-      this.col = Math.random()>.5 ? '124,109,255' : '0,212,255';
-    }
-    update(){
-      let dx=this.x-mouse.x, dy=this.y-mouse.y, d=Math.hypot(dx,dy);
-      if(d<130){ this.vx+=dx/d*.4; this.vy+=dy/d*.4; }
-      this.vx*=.985; this.vy*=.985;
-      this.x+=this.vx; this.y+=this.vy;
-      if(this.x<0||this.x>W||this.y<0||this.y>H) this.reset();
-    }
-    draw(){
-      x.beginPath(); x.arc(this.x,this.y,this.r,0,Math.PI*2);
-      x.fillStyle=`rgba(${this.col},${this.a})`; x.fill();
-    }
+  const c=document.getElementById('bg-canvas'),x=c.getContext('2d');
+  let W,H,pts=[],mouse={x:-9999,y:-9999};
+  function resize(){ W=c.width=innerWidth; H=c.height=innerHeight; }
+  resize(); addEventListener('resize',resize);
+  class P{
+    constructor(){this.reset();}
+    reset(){ this.x=Math.random()*W; this.y=Math.random()*H; this.r=Math.random()*1.4+0.3; this.vx=(Math.random()-.5)*.28; this.vy=(Math.random()-.5)*.28; this.a=Math.random()*.45+0.08; this.col=Math.random()>.5?'124,109,255':'0,212,255'; }
+    update(){ let dx=this.x-mouse.x,dy=this.y-mouse.y,d=Math.hypot(dx,dy); if(d<130){this.vx+=dx/d*.4;this.vy+=dy/d*.4;} this.vx*=.985;this.vy*=.985; this.x+=this.vx;this.y+=this.vy; if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset(); }
+    draw(){ x.beginPath();x.arc(this.x,this.y,this.r,0,Math.PI*2);x.fillStyle=`rgba(${this.col},${this.a})`;x.fill(); }
   }
-  for(let i=0;i<130;i++) pts.push(new P());
-
+  for(let i=0;i<130;i++)pts.push(new P());
   function frame(){
     x.clearRect(0,0,W,H);
-    pts.forEach(p=>{ p.update(); p.draw(); });
-    for(let i=0;i<pts.length;i++){
-      for(let j=i+1;j<pts.length;j++){
-        let d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);
-        if(d<110){
-          x.beginPath(); x.moveTo(pts[i].x,pts[i].y); x.lineTo(pts[j].x,pts[j].y);
-          x.strokeStyle=`rgba(124,109,255,${.1*(1-d/110)})`; x.lineWidth=.5; x.stroke();
-        }
-      }
+    pts.forEach(p=>{p.update();p.draw();});
+    for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+      let d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);
+      if(d<110){ x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle=`rgba(124,109,255,${.1*(1-d/110)})`;x.lineWidth=.5;x.stroke(); }
     }
     requestAnimationFrame(frame);
   }
   frame();
-  document.addEventListener('mousemove',e=>{ mouse.x=e.clientX; mouse.y=e.clientY; });
+  document.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
 })();
 
-/* ===== 3D CARD TILT ===== */
+/* 3D CARD TILT */
 document.querySelectorAll('.card').forEach(card=>{
   card.addEventListener('mousemove',e=>{
     const r=card.getBoundingClientRect();
-    const mx=((e.clientX-r.left)/r.width)*100;
-    const my=((e.clientY-r.top)/r.height)*100;
-    card.style.setProperty('--mx',mx+'%');
-    card.style.setProperty('--my',my+'%');
-    const rx=(e.clientY-r.top-r.height/2)/r.height*10;
-    const ry=(e.clientX-r.left-r.width/2)/r.width*-10;
-    card.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+    card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+    card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+    const rx=(e.clientY-r.top-r.height/2)/r.height*9;
+    const ry=(e.clientX-r.left-r.width/2)/r.width*-9;
+    card.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px)`;
   });
-  card.addEventListener('mouseleave',()=>{
-    card.style.transform='perspective(900px) rotateX(0) rotateY(0) translateY(0)';
-  });
+  card.addEventListener('mouseleave',()=>{ card.style.transform=''; });
 });
 
-/* ===== TYPED EFFECT ===== */
+/* TYPED EFFECT */
 (function(){
   const el=document.getElementById('ttext');
-  const phrases=[
-    'Building Multi-Agent Agentic Systems.',
-    'Evaluating RAG Answer Faithfulness.',
-    'Shipping LLM Pipelines to Production.',
-    'Tracking Agent Trajectory & Tool Calls.',
-    'Deploying Adaptive RAG on AWS Bedrock.',
-  ];
+  const phrases=['Building Agentic Evaluation Frameworks.','Shipping Adaptive RAG to Production.','Designing Multi-Agent LangGraph Systems.','Measuring RAG Answer Faithfulness & Context Precision.','Orchestrating LLM Tool Calls at Scale.'];
   let ti=0,ci=0,del=false;
   function go(){
     const s=phrases[ti];
-    if(!del){ el.textContent=s.slice(0,++ci); if(ci===s.length){del=true;setTimeout(go,2000);return;} }
-    else{ el.textContent=s.slice(0,--ci); if(ci===0){del=false;ti=(ti+1)%phrases.length;} }
-    setTimeout(go,del?38:65);
+    if(!del){el.textContent=s.slice(0,++ci);if(ci===s.length){del=true;setTimeout(go,2200);return;}}
+    else{el.textContent=s.slice(0,--ci);if(ci===0){del=false;ti=(ti+1)%phrases.length;}}
+    setTimeout(go,del?36:65);
   }
   setTimeout(go,900);
 })();
 
-/* ===== SCROLL REVEAL ===== */
+/* SCROLL REVEAL */
 (function(){
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);} });
-  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('vis');obs.unobserve(el.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
 })();
 
-/* ===== SCROLL EVENTS ===== */
+/* SCROLL EVENTS */
 window.addEventListener('scroll',()=>{
-  const s=scrollY, h=document.body.scrollHeight-innerHeight;
+  const s=scrollY,h=document.body.scrollHeight-innerHeight;
   document.getElementById('prog').style.width=(s/h*100)+'%';
-  const btn=document.getElementById('stop');
-  s>400?btn.classList.add('show'):btn.classList.remove('show');
-  const nav=document.getElementById('nav');
-  nav.style.background=s>40?'rgba(3,5,15,0.95)':'rgba(3,5,15,0.6)';
+  s>400?document.getElementById('stop').classList.add('show'):document.getElementById('stop').classList.remove('show');
+  document.getElementById('nav').style.background=s>40?'rgba(3,5,15,0.95)':'rgba(3,5,15,0.6)';
 });
 
-/* ===== HAMBURGER ===== */
-function toggleNav(){ document.getElementById('navLinks').classList.toggle('open'); }
+/* HAMBURGER */
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
 </script>
 </body>
 </html>
